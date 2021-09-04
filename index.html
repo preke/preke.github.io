@@ -1,573 +1,311 @@
 <!DOCTYPE html>
-<html lang="">
+<!--
+    Plain-Academic by Vasilios Mavroudis
+    Released under the  Simplified BSD License/FreeBSD (2-clause) License.
+    https://github.com/mavroudisv/plain-academic
+-->
 
-
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zhiyuan Wen's Homepage</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="files/Gold.jpg" type="image/icon type">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="files/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="files/font.css" rel='stylesheet' type='text/css'>
 
-<!-- ===========================
-THEME INFO
-=========================== -->
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta name="author" content="">
+  <script src="https://kit.fontawesome.com/a3d039cc94.js" crossorigin="anonymous"></script>
 
-<!-- ===========================
-SITE TITLE
-=========================== -->
-<title>Zhiyuan Wen</title>
+  <link rel="stylesheet" href="css/fontawesome-free-5.13.0-web/css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/fontawesome-free-5.13.0-web/css/brands.css">
+  <link rel="stylesheet" href="css/fontawesome-free-5.13.0-web/css/solid.css">
 
-<!-- ===========================
-FAVICONS
-=========================== -->
-<!--<link rel="icon" href="img/favicon.png">-->
-<link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-ipad-retina.png" />
-<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-iphone-retina.png" />
-<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-ipad.png" />
-<link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-iphone.png" />
-
-<!-- ===========================
-STYLESHEETS
-=========================== -->
-<script src="https://kit.fontawesome.com/a3d039cc94.js" crossorigin="anonymous"></script>
-
-<link rel="stylesheet" href="css/fontawesome-free-5.13.0-web/css/fontawesome.min.css">
-<link rel="stylesheet" href="css/fontawesome-free-5.13.0-web/css/brands.css">
-<link rel="stylesheet" href="css/fontawesome-free-5.13.0-web/css/solid.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
-
-<!-- ===========================
-FONTS & ICONS
-=========================== -->
-<!--<link href='http://fonts.googleapis.com/css?family=Kristi|Alegreya+Sans:300' rel='stylesheet' type='text/css'>-->
-<!--<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">-->
-
-
-
-<!--[if IE]>
-	<script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
-	<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-<![endif]-->
 </head>
 
+<style>
+
+:root {
+    --primary-color: #1B6FC2;
+    --secondary-color: #536390;
+    --font-color: #23476A;
+    --bg-color: #FFFFFF;
+    --heading-color: #292922;
+}
+
+[data-theme="dark"] {
+    --primary-color: #7ED4E5;
+    --secondary-color: #7ED4E5;
+    --font-color: #DADADA;
+    --bg-color: #181818;
+    --heading-color: #818cab;
+}
+
+hr {
+  display: block;
+  margin-top: 2.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: .5px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+a {
+    color: var(--primary-color);
+}
+a:hover {
+    color: var(--primary-color);
+}
+
+/*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+}
+
+
+.theme-switch {
+  display: inline-block;
+  top: 7px;
+  height: 27px;
+  right: 70px;
+  position: absolute;
+  width: 32px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #b3b3b3;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 12px;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #FFFFFF;
+  top: 0;
+  content: "";
+  height: 15px;
+  left: 0px;
+  position: absolute;
+  transition: .4s;
+  width: 15px;
+}
+
+input:checked + .slider {
+  background-color: #7ED4E5;
+}
+
+input:checked + .slider:before {
+  transform: translateX(17px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+</style>
+
 <body>
-<div class="container">
-	<!-- ===========================
-	HEADER
-	============================ -->
-	<div id="header" class="row">
-		<div class="col-sm-2">
-			<img class="propic" src="img/Gold.jpg" alt="" >
-		</div>
-		<!-- photo end-->
-
-		<div class="col-sm-10">
-			<div class="cv-title">
-				<div class="row">
-					<div class="col-sm-12">
-						<h1>Zhiyuan Wen（温志远）</h1>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-12">
-						<h2>Ph.D. Candidate @Department of Computing, PolyU</h2>
-					</div>
-				</div>
-
-			</div><!-- Title end-->
-
-			<!-- ===========================
-			SOCIAL & CONTACT
-			============================ -->
-			<br>
-			<div class="row">
-				<div class="col-sm-1" style="width: 30px;">
-					<a href="mailto:geek00021@gmail.com"><span class="social fa fa-envelope" style="color: #3EA2FA;font-size: 22px"></span></a>
-				</div>
-				<div class="col-sm-1" style="width: 30px;">
-					<a href="https://github.com/preke"><span class="social fab fa-github" style="color: #3EA2FA;font-size: 22px"></span></a>
-				</div>
-				<div class="col-sm-1" style="width: 35px;">
-					<a href="https://www.zhihu.com/people/wen-zhi-yuan-93"><span class="social fab fa-zhihu" style="color: #3EA2FA; font-size: 22px"></span></a>
-				</div>
-				<div class="col-sm-1">
-					<a href="https://space.bilibili.com/587820403"><span> <img src="img/Bilibili_Logo_Blue.svg" style="display:block;width:36px;height:18px"/></span></a>
-				</div><!-- social 1st col end-->
-
-			</div><!-- header social end-->
-		</div><!-- header right end-->
-	</div><!-- header end-->
-
-	<hr class="firsthr">
-
-	<!-- ===========================
-	BODY LEFT PART
-	============================ -->
-	<div class="col-md-12 mainleft">
-		<!--<div id="statement" class="row mobmid">-->
-			<!--<div class="col-sm-1">-->
-				<!--<span class="secicon fa fa-user"></span>-->
-			<!--</div>&lt;!&ndash;icon end&ndash;&gt;-->
-
-			<!--<div class="col-sm-11">-->
-				<!--<h3>Personal statement </h3>-->
-				<!--<p>Hi, I am Bappy from Bangladesh.Adipiscing elit. Nullam dapibus vehicula condimentum. Curabitur elit enim, accumsan vitae tristique ut, mollis at orci. Fusce cursus interdum neque nec aliquam. Proin turpis leo, laoreet non ultricies non, dictum nec nulla. Duis vitae nisi eu odio Adipiscing elit. Nullam dapibus vehicula condimentum. Curabitur elit enim, accumsan.</p>-->
-
-				<!--<p>Consectetur adipisicing elit. Hic labore, unde, ratione, itaque ducimus provident error similique qui, recusandae nam dignissimos autem. Sequi quas quis non, odit assumenda similique neque.</p>-->
-
-				<!--<p class="signature">TowkirAhmed</p>-->
-			<!--</div>&lt;!&ndash;info end&ndash;&gt;-->
-		<!--</div>&lt;!&ndash;personal statement end&ndash;&gt;-->
-
-
-		<div id="education" class="row mobmid">
-			<div class="col-sm-1">
-				<span class="secicon fa fa-graduation-cap"></span>
-			</div><!--icon end-->
-
-			<div class="col-sm-11">
-				<h3>Education & Certification</h3>
-
-				<div class="row">
-					<div class="col-md-9">
-						<h4>The Hong Kong Polytechnic University (PolyU), Department of Computing</h4>
-						<br>
-						<p class="sub">Ph.D. Candidate</p>
-						<p class="sub">Supervisor: <a href="http://www4.comp.polyu.edu.hk/~csjcao/">Prof. Jiannong Cao</a></p>
-					</div>
-
-					<div class="year col-md-3">
-						<p>2018-Present</p>
-					</div>
-				</div><!--Education & Certification 1 end-->
-				
-				<hr>
-
-				<div class="row">
-					<div class="col-md-9">
-						<h4>Sun Yat-sen University (SYSU), School of Data and Computer Science</h4>
-						<br>
-						<p class="sub">Bachelor of Engineering</p>
-						<p class="sub">Major: Computer Science (Information Security)</p>
-					</div>
-
-					<div class="year col-md-3">
-						<p>2013-2017</p>
-					</div>
-				</div><!--Education & Certification 2 end-->
-
-
-			</div>
-		</div><!--Education & Certifications end-->
-		
-		<hr>
-		<!-- ===========================
-		Publications
-		============================ -->
-		<div id="publication" class="row mobmid">
-			<div class="col-sm-1">
-				<span class="secicon fa fa-book"></span>
-			</div><!--icon end-->
-
-			<div class="col-sm-11">
-				<h3> Selected Publications
-					<a href="https://scholar.google.com/citations?user=bLhErOwAAAAJ&hl=zh-CN">(Full List)</a>
-				</h3>
-
-				<div class="row" style="margin-bottom: 1px">
-					<div class="col-md-12">
-						<h5>
-							<b>Zhiyuan Wen</b>, Jiannong Cao, Ruosong Yang, Senzhang Wang. <b>Decode with Template: Content Preserving Sentiment Transfer</b>[C] // The 12th International Conference on Language Resources and Evaluation.  <b>(LREC 2020)</b>
-						</h5>
-					</div>
-				</div><!--Pub 1 end-->
-
-				<!--<div class="row">-->
-					<!--<div class="col-md-12" style="margin-bottom: 1px">-->
-						<!--<h5>-->
-							<!--Ruosong Yang, Jiannong Cao, <b>Zhiyuan Wen</b>. <b> GGP: Glossary Guided Post-processing for Word Embedding Learning</b>[C] // The 12th International Conference on Language Resources and Evaluation.  <b>(LREC 2020)</b>-->
-						<!--</h5>-->
-					<!--</div>-->
-				<!--</div>&lt;!&ndash;Pub 2 end&ndash;&gt;-->
-
-				<!--<div class="row">-->
-					<!--<div class="col-md-12" style="margin-bottom: 1px">-->
-						<!--<h5>-->
-							<!--Yu Yang, Jiannong Cao, Jiaxing Shen, Ruosong Yang, <b>Zhiyuan Wen</b>. <b>Learning Analytics Based on Multilayer Behavior Fusion</b> [C] // International Conference on Blended Learning. Springer, Cham, 2020: 15-24.-->
-						<!--</h5>-->
-					<!--</div>-->
-				<!--</div>&lt;!&ndash;Pub 3 end&ndash;&gt;-->
-
-				<div class="row">
-					<div class="col-md-12" style="margin-bottom: 1px">
-						<h5>
-							Yu Yang*, <b>Zhiyuan Wen*</b>, Jiannong Cao, Jiaxing Shen, Hongzhi Yin, Xiaofang Zhou. <b> EPARS: Early Prediction of At-risk Studentswith Online and Offline Learning Behaviors</b>[C] // 25th International Conference on Database Systems for Advanced Applications.  <b>(DASFAA 2020, CCF-B)</b>  ( * Equal Contribution)
-						</h5>
-					</div>
-				</div><!--Pub 4 end-->
-
-				<!--<div class="row">-->
-					<!--<div class="col-md-12" style="margin-bottom: 1px">-->
-						<!--<h5>-->
-							<!--Fanghua Ye, Chuan Chen, <b>Zhiyuan Wen</b>, Zibin Zheng, Wuhui Chen, Yuren Zhou. <b>Homophily preserving community detection</b>[J] // IEEE transactions on neural networks and learning systems.  <b>(TNNLS, CCF-B)</b>-->
-						<!--</h5>-->
-					<!--</div>-->
-				<!--</div>&lt;!&ndash;Pub 5 end&ndash;&gt;-->
-
-				<div class="row">
-					<div class="col-md-12" style="margin-bottom: 1px">
-						<h5>
-							Qi Xie, <b>Zhiyuan Wen</b>, Jieming Zhu, Cuiyun Gao, Zibin Zheng. <b>Detecting Duplicate Bug Reports with Convolutional Neural Network</b>[C] // 2018 Asia-Pacific Software Engineering Conference. <b>(APSEC 2018, CCF-C)</b>
-							<a href="https://github.com/preke/apsec_2018">[Code]</a>
-						</h5>
-					</div>
-				</div><!--Pub 6 end-->
-
-			</div><!--Pub experiences end-->
-		</div><!--Pub experiences end-->
-
-		<hr>
-
-		<!-- ===========================
-		Acadamic Services
-		============================ -->
-		<div id="acadamic" class="row mobmid">
-			<div class="col-sm-1">
-				<span class="secicon fa fa-user"></span>
-			</div><!--icon end-->
-
-			<div class="col-sm-11">
-				<h3>Academic Services</h3>
-
-				<!--<div class="row" style="margin-bottom: 1px">-->
-					<!--<div class="col-md-12">-->
-						<!--<h5>-->
-							<!--<b>Program Co-Chair of <a href="https://conferences.computer.org/IC2E/2020/">The IEEE International Conference on Cloud Engineering (IC2E) 2020</a></b>-->
-						<!--</h5>-->
-					<!--</div>-->
-				<!--</div>&lt;!&ndash;Ser 1 end&ndash;&gt;-->
-
-				<div class="row" style="margin-bottom: 1px">
-					<div class="col-md-12">
-						<h5>
-							<b>Reviewer of EMNLP 2021, IJCAI 2019, BigData 2019, ISCC 2020, ACM TIST</b>
-						</h5>
-					</div>
-				</div><!--Ser 2 end-->
-
-			</div><!--Acadamic experiences end-->
-		</div><!--Acadamic experiences end-->
-
-		<hr>
-
-		<!-- ===========================
-		Teaching Experience
-		============================ -->
-		<div id="teaching" class="row mobmid">
-			<div class="col-sm-1">
-				<span class="secicon fa fa-bank"></span>
-			</div><!--icon end-->
-
-			<div class="col-sm-11">
-				<h3>Teaching Experience</h3>
-
-
-				<div class="row" style="margin-bottom: 1px">
-					<div class="col-md-9">
-						<h5><b>Teaching Assistant, COMP4146: Computational Finance, PolyU</b></h5>
-					</div>
-					<div class="year col-md-3">
-						<h5 >Spring 2021</h5>
-					</div>
-				</div><!--TA 5 end-->
-
-				<div class="row" style="margin-bottom: 1px">
-					<div class="col-md-9">
-						<h5><b>Teaching Assistant, COMP3011: Design and Analysis of Algorithms, PolyU</b></h5>
-					</div>
-					<div class="year col-md-3">
-						<h5 >Fall 2020</h5>
-					</div>
-				</div><!--TA 5 end-->
-
-				<div class="row" style="margin-bottom: 1px">
-					<div class="col-md-9">
-						<h5><b>Teaching Assistant, COMP1011: Programming Fundamentals, PolyU</b></h5>
-					</div>
-					<div class="year col-md-3">
-						<h5>Spring 2020</h5>
-					</div>
-				</div><!--TA 1 end-->
-
-				<div class="row" style="margin-bottom: 1px">
-					<div class="col-md-9">
-						<h5><b>Teaching Assistant, COMP3011: Design and Analysis of Algorithms, PolyU</b></h5>
-					</div>
-					<div class="year col-md-3">
-						<h5 >Fall 2019</h5>
-					</div>
-				</div><!--TA 2 end-->
-
-				<div class="row" style="margin-bottom: 1px">
-					<div class="col-md-9">
-						<h5><b>Teaching Assistant, COMP4133: Information Retrieval, PolyU</b></h5>
-					</div>
-					<div class="year col-md-3">
-						<h5 >Spring 2019</h5>
-					</div>
-				</div><!--TA 3 end-->
-
-				<div class="row" style="margin-bottom: 1px">
-					<div class="col-md-9">
-						<h5><b>Teaching Assistant, COMP3011: Design and Analysis of Algorithms, PolyU</b></h5>
-					</div>
-					<div class="year col-md-3">
-						<h5 >Fall 2018</h5>
-					</div>
-				</div><!--TA 4 end-->
-
-
-			</div><!--Teaching experiences end-->
-		</div><!--Teaching experiences end-->
-
-		<hr>
-
-		<!-- ===========================
-		Intern EXPERIENCES
-		============================ -->
-		<div id="job" class="row mobmid">
-			<div class="col-sm-1">
-				<span class="secicon fa fa-briefcase"></span>
-			</div><!--icon end-->
-
-			<div class="col-sm-11">
-				<h3>Intern Experiences</h3>
-
-				<div class="row">
-					<div class="col-md-9">
-						<h4>R&D software engineer</h4>
-						<p class="sub">Department of Reliability, 2012 laboratories, HUAWEI TECHNOLOGIES CO., LTD.</a>
-						</p>
-						<p>Participated in developing the NLPkit for semantic duplication detection of customer feedback of Huawei phones.</p>
-						<p>Published a <a href="https://ieeexplore.ieee.org/document/8719497">research paper</a> in 2018 APSEC as the second author.</p>
-					</div>
-
-					<div class="year col-md-3">
-						<p>2018.01-2018.05</p>
-					</div>
-				</div><!--Job 1 end-->
-				
-				<hr>
-
-				<div class="row">
-					<div class="col-md-9">
-						<h4>Research Intern Staff</h4>
-						<p class="sub">Search Applications Group, WXG(WeChat Group), Tencent</a>
-						</p>
-						<p>Participated in experiments of enhancing the community detection based on the Nonnegative Matrix Factorization.</p>
-						<p>Published a <a href="https://ieeexplore.ieee.org/document/8827596">research paper</a> in TNNLS as the third author.</p>
-					</div>
-
-					<div class="year col-md-3">
-						<p>2017.04-2017.09</p>
-					</div>
-				</div><!--Job 2 end-->
-			</div><!--Job experiences end-->
-		</div><!--Job experiences end-->
-
-		<hr>
-		<!-- ===========================
-		Awards EXPERIENCES
-		============================ -->
-		<div class="row mobmid">
-			<div class="col-sm-1">
-				<span class="secicon fa fa-trophy"></span>
-			</div><!--icon end-->
-
-			<div class="col-sm-11">
-				<h3>Awards</h3>
-
-				<div class="row" style="margin-bottom: 1px">
-					<div class="col-md-9">
-						<h5 ><b>YingCai Scholarship</b> of Sun Yat-sen University</h5>
-					</div>
-					<div class="year col-md-3">
-						<h5 >2015.09</h5>
-					</div>
-				</div><!--1st award end-->
-
-				<div class="row" style="margin-bottom: 1px">
-					<div class="col-md-9">
-						<h5 ><b>Second-class Scholarship</b> of Sun Yat-sen University</h5>
-					</div>
-					<div class="year col-md-3">
-						<h5 >2015.09</h5>
-					</div>
-				</div><!--2st award end-->
-
-				<div class="row" style="margin-bottom: 1px">
-					<div class="col-md-9">
-						<h5 ><b>Honorable Mention in MCM/ICM</b></h5>
-					</div>
-					<div class="year col-md-3">
-						<h5 >2015.04</h5>
-					</div>
-				</div><!--3st award end-->
-
-				<div class="row" style="margin-bottom: 1px">
-					<div class="col-md-9">
-						<h5 ><b>Third-class Scholarship</b> of Sun Yat-sen University</h5>
-					</div>
-					<div class="year col-md-3">
-						<h5 >2014.09</h5>
-					</div>
-				</div><!--4st award end-->
-
-				<div class="row" style="margin-bottom: 1px">
-					<div class="col-md-9">
-						<h5 ><b>Third-prize</b> in ICPC for Freshmen, SYSU</h5>
-					</div>
-					<div class="year col-md-3">
-						<h5 >2013.11</h5>
-					</div>
-				</div><!--5st award end-->
-
-				<div class="row" style="margin-bottom: 1px">
-					<div class="col-md-9">
-						<h5 ><b>Fourth-prize</b> in Football Competition for Freshmen, SYSU</h5>
-					</div>
-					<div class="year col-md-3">
-						<h5 >2013.11</h5>
-					</div>
-				</div><!--5st award end-->
-
-			</div><!--awards end-->
-
-		</div>
-	</div><!--left end-->
-
-
-
-	<!-- ===========================
-	SIDEBAR
-	=========================== -->
-	<!--<div class="col-md-4 mainright">-->
-		<!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
-			<!--&lt;!&ndash;<div class="col-sm-1 col-md-2 mobmid">&ndash;&gt;-->
-				<!--&lt;!&ndash;<span class="secicon fa fa-magic"></span>&ndash;&gt;-->
-			<!--&lt;!&ndash;</div>&lt;!&ndash;icon end&ndash;&gt;&ndash;&gt;-->
-
-			<!--&lt;!&ndash;<div class="col-sm-11 col-md-10">&ndash;&gt;-->
-				<!--&lt;!&ndash;<h3 class="mobmid">Technical skills </h3>&ndash;&gt;-->
-
-				<!--&lt;!&ndash;<p>Photoshop</p>&ndash;&gt;-->
-				<!--&lt;!&ndash;<div class="progress">&ndash;&gt;-->
-					<!--&lt;!&ndash;<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">&ndash;&gt;-->
-						<!--&lt;!&ndash;<span class="sr-only">65% Complete (success)</span>&ndash;&gt;-->
-					<!--&lt;!&ndash;</div>&ndash;&gt;-->
-				<!--&lt;!&ndash;</div>&lt;!&ndash;skill end&ndash;&gt;&ndash;&gt;-->
-
-
-				<!--&lt;!&ndash;<p>Illustrator</p>&ndash;&gt;-->
-				<!--&lt;!&ndash;<div class="progress">&ndash;&gt;-->
-					<!--&lt;!&ndash;<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">&ndash;&gt;-->
-						<!--&lt;!&ndash;<span class="sr-only">85% Complete</span>&ndash;&gt;-->
-					<!--&lt;!&ndash;</div>&ndash;&gt;-->
-				<!--&lt;!&ndash;</div>&lt;!&ndash;skill end&ndash;&gt;&ndash;&gt;-->
-
-				<!--&lt;!&ndash;<p>InDesign</p>&ndash;&gt;-->
-				<!--&lt;!&ndash;<div class="progress">&ndash;&gt;-->
-					<!--&lt;!&ndash;<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">&ndash;&gt;-->
-						<!--&lt;!&ndash;<span class="sr-only">60% Complete (warning)</span>&ndash;&gt;-->
-					<!--&lt;!&ndash;</div>&ndash;&gt;-->
-				<!--&lt;!&ndash;</div>&lt;!&ndash;skill end&ndash;&gt;&ndash;&gt;-->
-
-				<!--&lt;!&ndash;<p>Flash</p>&ndash;&gt;-->
-				<!--&lt;!&ndash;<div class="progress">&ndash;&gt;-->
-					<!--&lt;!&ndash;<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">&ndash;&gt;-->
-						<!--&lt;!&ndash;<span class="sr-only">30% Complete (danger)</span>&ndash;&gt;-->
-					<!--&lt;!&ndash;</div>&ndash;&gt;-->
-				<!--&lt;!&ndash;</div>&lt;!&ndash;skill end&ndash;&gt;&ndash;&gt;-->
-			<!--&lt;!&ndash;</div>&lt;!&ndash;info end&ndash;&gt;&ndash;&gt;-->
-		<!--&lt;!&ndash;</div>&lt;!&ndash;tech skills end&ndash;&gt;&ndash;&gt;-->
-		<!---->
-		<!--<hr>-->
-
-		<!--<div class="row mobmid">-->
-			<!--<div class="col-sm-1 col-md-2">-->
-				<!--<span class="secicon fa fa-trophy"></span>-->
-			<!--</div>&lt;!&ndash;icon end&ndash;&gt;-->
-
-			<!--<div class="col-sm-11 col-md-10 ">-->
-				<!--<h3>Awards</h3>-->
-
-				<!--<div class="award">-->
-					<!--<h4>Best Designer 2012</h4>-->
-					<!--<p class="sub"><a href="">Life View Media Ltd.</a></p>-->
-					<!--<p>Studying all aspect of Graphic Design Including Advertising Design, Branding, Copy Exhibition Design, Ilustration.</p>-->
-				<!--</div>-->
-				<!--&lt;!&ndash;1st award end&ndash;&gt;-->
-
-				<!--<div class="award">-->
-					<!--<h4>Best Designer 2011</h4>-->
-					<!--<p class="sub"><a href="">Alexa Design Solution</a></p>-->
-					<!--<p>Studying all aspect of Graphic Design Including Advertising Design, Branding, Copy Exhibition Design, Ilustration, Information Design, Packaging Design and Website Design</p>-->
-				<!--</div>&lt;!&ndash;1st award end&ndash;&gt;-->
-			<!--</div>&lt;!&ndash;awards end&ndash;&gt;-->
-
-		<!--</div>-->
-		<!---->
-		<!--<hr>-->
-
-		<!--&lt;!&ndash;<div class="row ">&ndash;&gt;-->
-			<!--&lt;!&ndash;<div class="col-sm-1 col-md-2 mobmid">&ndash;&gt;-->
-				<!--&lt;!&ndash;<span class="secicon fa fa-quote-left"></span>&ndash;&gt;-->
-			<!--&lt;!&ndash;</div>&lt;!&ndash;icon end&ndash;&gt;&ndash;&gt;-->
-
-			<!--&lt;!&ndash;<div class="col-sm-11 col-md-10 testimonials">&ndash;&gt;-->
-				<!--&lt;!&ndash;<h3 class="mobmid">Testimonials </h3>&ndash;&gt;-->
-
-				<!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
-					<!--&lt;!&ndash;<blockquote>&ndash;&gt;-->
-						<!--&lt;!&ndash;<p>Sit amet, consectetur adipisicing elit. Fuga quidem ipsum maiores necessitatibus sint, porro temporibus labore, amet officia unde libero eligendi? Porro dolorum itaque, facere harum amet, rem libero.</p>&ndash;&gt;-->
-					<!--&lt;!&ndash;</blockquote>&ndash;&gt;-->
-					<!--&lt;!&ndash;<img src="img/mushfiq.jpg" alt="">&ndash;&gt;-->
-					<!--&lt;!&ndash;<h4>Mushfiqul Islam</h4>&ndash;&gt;-->
-					<!--&lt;!&ndash;<p>The UX Votch</p>&ndash;&gt;-->
-				<!--&lt;!&ndash;</div>&lt;!&ndash;1st testimonial end&ndash;&gt;&ndash;&gt;-->
-
-				<!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
-					<!--&lt;!&ndash;<blockquote>&ndash;&gt;-->
-						<!--&lt;!&ndash;<p>Consectetur adipisicing elit. Fuga quidem ipsum maiores necessitatibus sint, porro temporibus labore, unde libero eligendi? Porro dolorum itaque, facere harum amet, rem libero.</p>&ndash;&gt;-->
-					<!--&lt;!&ndash;</blockquote>&ndash;&gt;-->
-					<!--&lt;!&ndash;<img src="img/siblu.jpg" alt="">&ndash;&gt;-->
-					<!--&lt;!&ndash;<h4>E.A. Siblu</h4>&ndash;&gt;-->
-					<!--&lt;!&ndash;<p>The Jatir Vobisshot</p>&ndash;&gt;-->
-				<!--&lt;!&ndash;</div>&lt;!&ndash;2nd testimonial end&ndash;&gt;&ndash;&gt;-->
-
-				<!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
-					<!--&lt;!&ndash;<blockquote>&ndash;&gt;-->
-						<!--&lt;!&ndash;<p>Fuga quidem ipsum maiores necessitatibus sint, porro temporibus labore, amet officia unde libero eligendi? Porro dolorum itaque, facere harum amet, rem libero.</p>&ndash;&gt;-->
-					<!--&lt;!&ndash;</blockquote>&ndash;&gt;-->
-					<!--&lt;!&ndash;<img src="img/nasir.jpg" alt="">&ndash;&gt;-->
-					<!--&lt;!&ndash;<h4>Nasir Uddin</h4>&ndash;&gt;-->
-					<!--&lt;!&ndash;<p>The Cute Huzur</p>&ndash;&gt;-->
-				<!--&lt;!&ndash;</div>&lt;!&ndash;3rd testimonial end&ndash;&gt;&ndash;&gt;-->
-			<!--&lt;!&ndash;</div>&lt;!&ndash;testimonials end&ndash;&gt;&ndash;&gt;-->
-		<!--&lt;!&ndash;</div>&lt;!&ndash;tech skills end&ndash;&gt;&ndash;&gt;-->
-	<!--</div>&lt;!&ndash;right end&ndash;&gt;-->
-</div><!--container end-->
-
-
-<!--necessary scripts and plugins-->
-<script src="js/jquery-1.8.3.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.nicescroll.min.js"></script>
-<script src="js/evenfly.js"></script>
+
+<!-- Navigation -->
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+    <ul class="nav navbar-nav">
+              <li><a href="https://preke.github.io/">Zhiyuan Wen's Homepage</a></li>
+    </ul>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+      </label>
+    </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Entries Column -->
+            <div class="col-md-3" >
+                <!-- Contact Info on the Sidebar and image -->
+                <div style="font-family: Arial, Helvetica, sans-serif; font-size: 24px;"><b>温志远 (Zhiyuan Wen) </b></div><br>
+                <img class="img-responsive" src="files/Gold.jpg" height="400" width="400" alt=""><br>
+                <p>PhD student<br>
+                THe Hong Kong Polytechnic University<br></p>
+                <p><b>Email:</b> cszwen [at] comp.polyu.edu.hk<br>
+                <b>Office:</b> PQ 515, Mong Man Wai Building<br></p>
+
+                <div class="row">
+                    <div class="col-sm-1" style="width: 30px;">
+                        <a href="https://github.com/preke"><span class="social fab fa-github" style="color: #3EA2FA;font-size: 22px"></span></a>
+                    </div>
+                    <div class="col-sm-1" style="width: 35px;">
+                        <a href="https://www.zhihu.com/people/wen-zhi-yuan-93"><span class="social fab fa-zhihu" style="color: #3EA2FA; font-size: 22px"></span></a>
+                    </div>
+                    <div class="col-sm-1">
+                        <a href="https://space.bilibili.com/587820403"><span> <img src="img/Bilibili_Logo_Blue.svg" style="display:block;width:36px;height:18px"/></span></a>
+                    </div><!-- social 1st col end-->
+
+                </div><!-- header social end-->
+                </p>
+
+            </div>
+
+            <!-- main info -->
+            <div class="col-md-8" >
+                <div style="margin-top:5vh; text-align:justify;">
+
+      <!--<div  style="text-align:left;">-->
+        <!--This is test content.This is test content.This is test content.This is test content.This is test content.This is test content.This is test content.-->
+          <!--This is test content.This is test content.This is test content.This is test content.This is test content.-->
+          <!--This is test content.This is test content.This is test content.-->
+
+
+      <!--</div>-->
+      <!--<hr>-->
+      <div  style="text-align:left;">
+          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><b>Education</b></div><br>
+           Ph.D in Natural Language Processing, <b>The Hong Kong Polytechnic University</b>, Hong Kong, China, 2018-present.<br>
+           BSc Information Security, <b>Sun Yat-sen University</b>, Guangzhou, China, 2013-2017.<br>
+
+      </div>
+
+      <hr>
+
+      <div  style="margin-top:2vh; text-align:left;">
+      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><b>Research Experience</b></div><br>
+          <p>
+              I am a Ph.D student under the supervision of <a href="https://www4.comp.polyu.edu.hk/~csjcao/">Prof. Jiancong Cao</a> at PolyU. My current research interest is integrating personality and emotion into dialog systems, so that the conversational AI can generate empathetic responses. I am also interested in text style transfer.
+          </p>
+          <p>
+              Before that, I had a 5-month internship at Huawei, Shenzhen; <a href="http://jiemingzhu.github.io/"> Dr. Jieming Zhu </a> was my mentor. We conducted research on semantic matching and design and apply algorithm for duplicated bug report detection.
+          </p>
+
+          <p>
+              Previously, I was a research assisstant at InPlusLab, Sun Yat-sen University, under the supervision of <a href="http://www.zibinzheng.com/"> Prof. Zheng Zibin </a>.
+          </p>
+
+
+      </div>
+
+      <hr>
+
+
+
+      <div  style="margin-top:2vh; text-align:left;">
+      <div align="justify", style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><b>Selected Publication</b> <small style="font-size:x-small"><a href="https://scholar.google.com/citations?user=bLhErOwAAAAJ&hl=zh-CN">(Full List on Google Scholar)</a> </small></div><br>
+
+          <p> <b>Zhiyuan Wen</b>, Jiannong Cao, Ruosong Yang, Shuaiqi Liu, Jiaxing Shen. <b>Automatically Select Emotion for Response via Personality-affected Emotion Transition</b>[C] // Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021 </p>
+          <p> Shuaiqi Liu, Jiannong Cao, Ruosong Yang, <b>Zhiyuan Wen</b>. <b>Highlight-Transformer: Leveraging Key Phrase Aware Attention to Improve Abstractive Multi-Document Summarization</b>[C] // Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021 </p>
+
+          <p> <b>Zhiyuan Wen</b>, Jiannong Cao, Ruosong Yang, Senzhang Wang. <b>Decode with Template: Content Preserving Sentiment Transfer</b>[C] // The 12th International Conference on Language Resources and Evaluation.  <b>(LREC 2020)</b> </p>
+
+          <p> Yu Yang*, <b>Zhiyuan Wen*</b>, Jiannong Cao, Jiaxing Shen, Hongzhi Yin, Xiaofang Zhou. <b> EPARS: Early Prediction of At-risk Studentswith Online and Offline Learning Behaviors</b>[C] // 25th International Conference on Database Systems for Advanced Applications.  <b>(DASFAA 2020, CCF-B)</b>  ( * Equal Contribution)
+          </p>
+
+          <p> Qi Xie, <b>Zhiyuan Wen</b>, Jieming Zhu, Cuiyun Gao, Zibin Zheng. <b>Detecting Duplicate Bug Reports with Convolutional Neural Network</b>[C] // 2018 Asia-Pacific Software Engineering Conference. <b>(APSEC 2018, CCF-C)</b>
+              <a href="https://github.com/preke/apsec_2018">[Code]</a> </p>
+
+
+
+      </div>
+
+
+      <hr>
+
+      <div  style="margin-top:2vh; text-align:left;">
+          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><b>Academic Services</b></div><br>
+                        <p> I was a reviewer of EMNLP 2021, IJCAI 2019, BigData 2019, ISCC 2020, and ACM TIST.</p>
+
+          </div>
+
+      <hr>
+
+      <div  style="margin-top:2vh; text-align:left;">
+         <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><b>Teaching Experience</b></div><br>
+          <p> Teaching Assistant, COMP4146: Computational Finance, PolyU, Spring 2021</p>
+          <p> Teaching Assistant, COMP1011: Programming Fundamentals, PolyU, Spring 2020</p>
+          <p> Teaching Assistant, COMP4133: Information Retrieval, PolyU, Spring 2019</p>
+          <p> Teaching Assistant, COMP3011: Design and Analysis of Algorithms, PolyU, Fall 2020, Fall 2019, Fall 2018</p>
+
+
+      </div>
+
+      <hr>
+
+
+
+ <!-- Other people may like it too! -->
+     <div>
+    <p style="font-size:0.9em; float:right; color:#787878;"> Thanks to <u> <a style="color:#787878" target="_blank" href="https://mavroud.is/">Vasilios Mavroudis</a></u> for the <u><a style="color:#787878" target="_blank" href="https://github.com/mavroudisv/plain-academic">template</a></u>! </p>
+    </div>
+    <!-- /.container -->
+
+
+<script>
+
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark'); //add this
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light'); //add this
+    }
+}
+
+
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+    }
+}
+
+</script>
+
 
 </body>
+
 </html>
