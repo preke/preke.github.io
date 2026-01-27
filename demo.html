@@ -311,7 +311,40 @@ document.querySelectorAll('.demo-thumbnail').forEach(thumbnail => {
     const popup = thumbnail.querySelector('.large-image-popup');
     
     // Show popup when hovering over the thumbnail
-    img.addEventListener('mouseenter', () => {
+    img.addEventListener('mouseenter', (e) => {
+        // Position the popup to stay within viewport
+        const rect = thumbnail.getBoundingClientRect();
+        const popupWidth = 600; // Width of the popup
+        const popupHeight = 400; // Approximate height of the popup
+        
+        // Calculate horizontal position
+        let leftPos;
+        if (rect.right + popupWidth + 20 <= window.innerWidth) {
+            // Enough space to the right
+            leftPos = '100%';
+        } else if (rect.left - popupWidth - 10 >= 0) {
+            // Enough space to the left
+            leftPos = `-${popupWidth}px`;
+        } else {
+            // Not enough space on either side, position to the right edge of the screen
+            leftPos = `${window.innerWidth - rect.right - 20}px`;
+        }
+        
+        // Calculate vertical position
+        let topPos;
+        if (rect.top + popupHeight + 20 <= window.innerHeight) {
+            // Enough space below
+            topPos = '0';
+        } else if (rect.bottom - popupHeight >= 0) {
+            // Position above if not enough space below
+            topPos = `-${popupHeight + 20}px`;
+        } else {
+            // Adjust to fit in viewport
+            topPos = `-${rect.top - 20}px`;
+        }
+        
+        popup.style.left = leftPos;
+        popup.style.top = topPos;
         popup.style.display = 'block';
     });
     
