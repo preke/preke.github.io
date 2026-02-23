@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- 使用currentColor以便可以通过CSS改变颜色 -->
+  <path d="M12 3L4 9v6c0 2.21 1.79 4 4 4h4c2.21 0 4-1.79 4-4V9l-4-6z" fill="currentColor"/>
+  <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+  <rect x="8" y="12" width="2" height="4" fill="currentColor"/>
+  <rect x="14" y="12" width="2" height="4" fill="currentColor"/>
+</svg>
