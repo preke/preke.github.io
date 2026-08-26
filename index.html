@@ -32,6 +32,10 @@
     --font-color: #23476A;
     --bg-color: #FFFFFF;
     --heading-color: #292922;
+    --news-line-color: #D7E7F6;
+    --news-muted-color: #60778C;
+    --news-a-text-color: #FFFFFF;
+    --bullet-halo-color: #E5F0FA;
 }
 
 [data-theme="dark"] {
@@ -40,6 +44,10 @@
     --font-color: #DADADA;
     --bg-color: #181818;
     --heading-color: #818cab;
+    --news-line-color: #315065;
+    --news-muted-color: #A9C7D1;
+    --news-a-text-color: #13242B;
+    --bullet-halo-color: #29414C;
 }
 
 hr {
@@ -62,6 +70,17 @@ a {
 }
 a:hover {
     color: var(--primary-color);
+}
+
+.section-icon {
+  display: inline-block;
+  width: 1.15em;
+  margin-right: 0.35em;
+  color: currentColor;
+  font-size: 1em;
+  line-height: 1;
+  text-align: center;
+  vertical-align: -0.06em;
 }
 
 /*Simple css to style it like a toggle switch*/
@@ -130,6 +149,121 @@ input:checked + .slider:before {
 /* Custom navbar adjustment */
 .custom-navbar-right {
   margin-right: 60px; /* Adjust this value to align with content */
+}
+
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news-heading {
+  margin: 0 0 20px;
+  color: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.news-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  column-gap: 20px;
+  padding: 0 0 20px 17px;
+  border-left: 2px solid var(--news-line-color);
+}
+
+.news-item:last-child {
+  padding-bottom: 0;
+}
+
+.news-item::before {
+  position: absolute;
+  top: 0.48em;
+  left: -6px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  background: var(--bg-color);
+  box-sizing: border-box;
+  content: "";
+}
+
+.news-date {
+  color: var(--news-muted-color);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.news-copy {
+  margin: -2px 0 0;
+}
+
+.news-celebration {
+  display: inline-block;
+  margin-right: 0.45em;
+}
+
+.news-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 7px;
+  border: 1px solid var(--primary-color);
+  border-radius: 999px;
+  color: var(--primary-color);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+
+.news-badge--a {
+  background: var(--primary-color);
+  color: var(--news-a-text-color);
+}
+
+.detail-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.detail-list li {
+  position: relative;
+  margin: 0 0 9px;
+  padding-left: 20px;
+  line-height: 1.55;
+}
+
+.detail-list li:last-child {
+  margin-bottom: 0;
+}
+
+.detail-list li::before {
+  position: absolute;
+  top: 0.65em;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--bullet-halo-color);
+  content: "";
+}
+
+@media (max-width: 640px) {
+  .news-item {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 2px;
+  }
 }
 
 </style>
@@ -204,16 +338,18 @@ input:checked + .slider:before {
       <!--</div>-->
       <!--<hr>-->
       <div  style="text-align:left;">
-          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><b>Education Background</b></div><br>
-           Ph.D.  <b>The Hong Kong Polytechnic University</b>, Hong Kong, China, 2018-2023.<br>
-           B.E. <b>Sun Yat-sen University</b>, Guangzhou, China, 2013-2017.<br>
+          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><i class="section-icon fas fa-graduation-cap" aria-hidden="true"></i><b>Education Background</b></div><br>
+          <ul class="detail-list" role="list">
+              <li>Ph.D. <b>The Hong Kong Polytechnic University</b>, Hong Kong, China, 2018-2023.</li>
+              <li>B.E. <b>Sun Yat-sen University</b>, Guangzhou, China, 2013-2017.</li>
+          </ul>
 
       </div>
 
       <hr>
 
       <div  style="margin-top:2vh; text-align:left;">
-      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><b>Research Experience</b></div><br>
+      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><i class="section-icon fas fa-flask" aria-hidden="true"></i><b>Research Experience</b></div><br>
           <p>
               I am a Research Assistant Professor in the Department of Computing, PolyU. My current research interest is <b>LLM-based Multi-agent Systems</b>, <b>AI in Education</b>, and <b>AI in Healthcare</b>. Meanwhile, I am also interested in integrating personality and emotion into LLM-based dialog systems to enable conversational AI to generate human-like responses.
           </p>
@@ -238,14 +374,40 @@ input:checked + .slider:before {
 
                     <hr>
 
+      <section style="margin-top:2vh; text-align:left;" aria-labelledby="news-heading">
+          <h2 id="news-heading" class="news-heading"><i class="section-icon fas fa-newspaper" aria-hidden="true"></i>News</h2>
+          <ol class="news-list" role="list">
+              <li class="news-item">
+                  <time class="news-date" datetime="2026-08">Aug. 2026</time>
+                  <p class="news-copy"><span class="news-celebration" aria-hidden="true">🎉</span>Our paper <a href="https://arxiv.org/abs/2602.11238" target="_blank" rel="noopener noreferrer"><b>SurveyLens: A Research Discipline-Aware Benchmark for Automatic Survey Generation</b></a> has been accepted by <b>EMNLP 2026</b>. <span class="news-badge" title="CCF-recommended Class B conference">CCF-B</span></p>
+              </li>
+              <li class="news-item">
+                  <time class="news-date" datetime="2026-08">Aug. 2026</time>
+                  <p class="news-copy"><span class="news-celebration" aria-hidden="true">🎉</span>Our paper <a href="https://arxiv.org/abs/2602.00850" target="_blank" rel="noopener noreferrer"><b>PS<sup>2</sup>: Parameterized Control for Fine-Grained Student Proficiency Simulation</b></a> has been accepted by <b>CIKM 2026</b>. <span class="news-badge" title="CCF-recommended Class B conference">CCF-B</span></p>
+              </li>
+              <li class="news-item">
+                  <time class="news-date" datetime="2026-07">Jul. 2026</time>
+                  <p class="news-copy"><span class="news-celebration" aria-hidden="true">🎉</span>Our project <a href="https://www.polyu.edu.hk/comp/news-and-events/news/2026/0727_airea-2026/" target="_blank" rel="noopener noreferrer"><b>PolyInterview: A Multi-Agent Interview Practice Platform for Communication Education</b></a> won the <b>Champion award in Stream 2 &ndash; “Challenge”</b> at the 2nd International Competition on AI in Education 2026.</p>
+              </li>
+              <li class="news-item">
+                  <time class="news-date" datetime="2026-07">Jul. 2026</time>
+                  <p class="news-copy"><span class="news-celebration" aria-hidden="true">🎉</span>Our paper <a href="https://arxiv.org/abs/2604.19541" target="_blank" rel="noopener noreferrer"><b>FOCAL: Filtered On-device Continuous Activity Logging for Efficient Personal Desktop Summarization</b></a> has been accepted by <b>ACM MM 2026</b>. <span class="news-badge news-badge--a" title="CCF-recommended Class A conference">CCF-A</span></p>
+              </li>
+          </ol>
+      </section>
+
+                    <hr>
+
       <div  style="margin-top:2vh; text-align:left;">
-         <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><b>Teaching Experience</b></div><br>
-          <p> <b>Lecturer</b>, <b>COMP 4431: Artificial Intelligence</b>, PolyU, Fall 2025</p>
-          <p> <b>Guest Lecturer</b>, <b>COMP 5152: Advanced Data Analytics</b>, PolyU, Spring 2024</p>
-          <p> Teaching Assistant, COMP4146: Computational Finance, PolyU, Spring 2021</p>
-          <p> Teaching Assistant, COMP1011: Programming Fundamentals, PolyU, Spring 2020</p>
-          <p> Teaching Assistant, COMP4133: Information Retrieval, PolyU, Spring 2019</p>
-          <p> Teaching Assistant, COMP3011: Design and Analysis of Algorithms, PolyU, Fall 2020, Fall 2019, Fall 2018</p>
+         <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><i class="section-icon fas fa-chalkboard-teacher" aria-hidden="true"></i><b>Teaching Experience</b></div><br>
+          <ul class="detail-list" role="list">
+              <li><b>Lecturer</b>, <b>COMP 4431: Artificial Intelligence</b>, PolyU, Fall 2025</li>
+              <li><b>Guest Lecturer</b>, <b>COMP 5152: Advanced Data Analytics</b>, PolyU, Spring 2024</li>
+              <li>Teaching Assistant, COMP4146: Computational Finance, PolyU, Spring 2021</li>
+              <li>Teaching Assistant, COMP1011: Programming Fundamentals, PolyU, Spring 2020</li>
+              <li>Teaching Assistant, COMP4133: Information Retrieval, PolyU, Spring 2019</li>
+              <li>Teaching Assistant, COMP3011: Design and Analysis of Algorithms, PolyU, Fall 2020, Fall 2019, Fall 2018</li>
+          </ul>
 
 
       </div>
@@ -253,22 +415,26 @@ input:checked + .slider:before {
       <hr>
       
       <div  style="margin-top:2vh; text-align:left;">
-          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><b>Selected Awards</b></div>
+          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><i class="section-icon fas fa-award" aria-hidden="true"></i><b>Selected Awards</b></div>
           <br>
-          <p> <b>Champion (Stream 2 &ndash; Challenge)</b>, the Second International Competition on AI in Education 2026, for <b>PolyInterview: A Multi-Agent Interview Practice Platform for Communication Education</b></p>
-          <p> <a href="https://besc-conf.org/2025/awards" target="_blank"><b>Best Paper in Special Session "Human-AI Interaction in Educational Settings: Disciplinary Characteristics, Interaction Processes, and Learning Performance"</b></a>, the 12th International Conference on Behavioural and Social Computing <b>(BESC 2025)</b>, for <b>Theory-Informed vs. Example-Driven Prompting for LLM-Based Qualitative Data Coding in Educational Research</b></p>
-          <p> <b>Best Reviewer Award</b>, the 12th International Conference on Behavioural and Social Computing <b>(BESC 2025)</b></p>
-          <p> <b>Best Presentation Award</b>, PolyU Research Student Conference 2023 <b>(PRSC 2023)</b></p>
+          <ul class="detail-list" role="list">
+              <li><b>Champion (Stream 2 &ndash; Challenge)</b>, the Second International Competition on AI in Education 2026, for <b>PolyInterview: A Multi-Agent Interview Practice Platform for Communication Education</b></li>
+              <li><a href="https://besc-conf.org/2025/awards" target="_blank"><b>Best Paper in Special Session "Human-AI Interaction in Educational Settings: Disciplinary Characteristics, Interaction Processes, and Learning Performance"</b></a>, the 12th International Conference on Behavioural and Social Computing <b>(BESC 2025)</b>, for <b>Theory-Informed vs. Example-Driven Prompting for LLM-Based Qualitative Data Coding in Educational Research</b></li>
+              <li><b>Best Reviewer Award</b>, the 12th International Conference on Behavioural and Social Computing <b>(BESC 2025)</b></li>
+              <li><b>Best Presentation Award</b>, PolyU Research Student Conference 2023 <b>(PRSC 2023)</b></li>
+          </ul>
 
       </div>
       <hr>
 
       <div  style="margin-top:2vh; text-align:left;">
-          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><b>Running</b></div><br>
-          <p><a href="img/2026%20Marathon.pdf">Marathon</a> @ Standard Chartered Hong Kong Marathon 2026</p>
-          <p><a href="img/standard_2024.pdf">Marathon</a> @ Standard Chartered Hong Kong Marathon 2024</p>
-          <p><a href="img/cert.pdf">Half Marathon</a> @ Bank of China (HK) Hong Kong-Zhuhai-Macao Bridge (HK Section) Half Marathon 2023</p>
-          <p><a href="img/2022_half_m.pdf">Half Marathon</a> @ Standard Chartered Hong Kong Marathon 2023</p>
+          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><i class="section-icon fas fa-running" aria-hidden="true"></i><b>Running</b></div><br>
+          <ul class="detail-list" role="list">
+              <li><a href="img/2026%20Marathon.pdf">Marathon</a> @ Standard Chartered Hong Kong Marathon 2026</li>
+              <li><a href="img/standard_2024.pdf">Marathon</a> @ Standard Chartered Hong Kong Marathon 2024</li>
+              <li><a href="img/cert.pdf">Half Marathon</a> @ Bank of China (HK) Hong Kong-Zhuhai-Macao Bridge (HK Section) Half Marathon 2023</li>
+              <li><a href="img/2022_half_m.pdf">Half Marathon</a> @ Standard Chartered Hong Kong Marathon 2023</li>
+          </ul>
 
 
 

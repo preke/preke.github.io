@@ -32,6 +32,7 @@
     --font-color: #23476A;
     --bg-color: #FFFFFF;
     --heading-color: #292922;
+    --bullet-halo-color: #E5F0FA;
 }
 
 [data-theme="dark"] {
@@ -40,6 +41,7 @@
     --font-color: #DADADA;
     --bg-color: #181818;
     --heading-color: #818cab;
+    --bullet-halo-color: #29414C;
 }
 
 hr {
@@ -62,6 +64,17 @@ a {
 }
 a:hover {
     color: var(--primary-color);
+}
+
+.section-icon {
+  display: inline-block;
+  width: 1.15em;
+  margin-right: 0.35em;
+  color: currentColor;
+  font-size: 1em;
+  line-height: 1;
+  text-align: center;
+  vertical-align: -0.06em;
 }
 
 /*Simple css to style it like a toggle switch*/
@@ -132,6 +145,35 @@ input:checked + .slider:before {
   margin-right: 60px; /* Adjust this value to align with content */
 }
 
+.detail-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.detail-list li {
+  position: relative;
+  margin: 0 0 9px;
+  padding-left: 20px;
+  line-height: 1.55;
+}
+
+.detail-list li:last-child {
+  margin-bottom: 0;
+}
+
+.detail-list li::before {
+  position: absolute;
+  top: 0.65em;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--bullet-halo-color);
+  content: "";
+}
+
 </style>
 
 <body>
@@ -196,20 +238,20 @@ input:checked + .slider:before {
                 <div style="margin-top:5vh; text-align:justify;">
 
       <div  style="text-align:left;">
-          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><b>Academic Services</b></div>
+          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><i class="section-icon fas fa-hands-helping" aria-hidden="true"></i><b>Academic Services</b></div>
           <br>
           
           <div style="margin-bottom: 25px;">
-              <p style="font-family: Arial, Helvetica, sans-serif; font-size: 17px; margin-bottom: 10px;"><b>Journal Editorship</b></p>
-              <ul style="padding-left: 0; margin-bottom: 0; line-height: 1.6; list-style-type: none;">
+              <p style="font-family: Arial, Helvetica, sans-serif; font-size: 17px; margin-bottom: 10px;"><i class="section-icon fas fa-edit" aria-hidden="true"></i><b>Journal Editorship</b></p>
+              <ul class="detail-list" role="list">
                   <li><b>Associate Editor</b> of IEEE Transactions on Computational Social Systems (IEEE TCSS)</li>
               </ul>
           </div>
           <hr>
 
           <div style="margin-bottom: 25px;">
-              <p style="font-family: Arial, Helvetica, sans-serif; font-size: 17px; margin-bottom: 10px;"><b>Conference and Workshop Organization</b></p>
-              <ul style="padding-left: 0; margin-bottom: 0; line-height: 1.6; list-style-type: none;">
+              <p style="font-family: Arial, Helvetica, sans-serif; font-size: 17px; margin-bottom: 10px;"><i class="section-icon fas fa-calendar-check" aria-hidden="true"></i><b>Conference and Workshop Organization</b></p>
+              <ul class="detail-list" role="list">
                   <li><b>Demo Chair</b> of The 13th International Conference on Behavioural and Social Computing (BESC'26)</li>
                   <li><b>Local Arrangement Chair</b> of The 5th International Symposium on Big Data and Artificial Intelligence For Education Transformation (ISBDAI'26)</li>
                   <li><b>Track Chair</b> of Special Track 5 Artificial Intelligence and Software Engineering, 2026 International Conference on Intelligence (ICI 2026)</li>
@@ -220,8 +262,9 @@ input:checked + .slider:before {
           <hr>
 
           <div style="margin-bottom: 25px;">
-              <p style="font-family: Arial, Helvetica, sans-serif; font-size: 17px; margin-bottom: 10px;"><b>Conference and Journal Review</b></p>
-              <ul style="padding-left: 0; margin-bottom: 0; line-height: 1.6; list-style-type: none;">
+              <p style="font-family: Arial, Helvetica, sans-serif; font-size: 17px; margin-bottom: 10px;"><i class="section-icon fas fa-clipboard-check" aria-hidden="true"></i><b>Conference and Journal Review</b></p>
+              <ul class="detail-list" role="list">
+                  <li><b>Area Chair</b> of the EMNLP 2026 System Demonstrations Track</li>
                   <li><b>Area Chair</b> of ARR'2025 October</li>
                   <li><b>Program Committee Member</b> of WWW'26 Special Track on Web4Good</li>
                   <li><b>Program Committee Member</b> of WWW'25</li>

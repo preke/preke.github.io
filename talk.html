@@ -32,6 +32,8 @@
     --font-color: #23476A;
     --bg-color: #FFFFFF;
     --heading-color: #292922;
+    --timeline-line-color: #D7E7F6;
+    --timeline-muted-color: #60778C;
 }
 
 [data-theme="dark"] {
@@ -40,6 +42,8 @@
     --font-color: #DADADA;
     --bg-color: #181818;
     --heading-color: #818cab;
+    --timeline-line-color: #315065;
+    --timeline-muted-color: #A9C7D1;
 }
 
 hr {
@@ -62,6 +66,17 @@ a {
 }
 a:hover {
     color: var(--primary-color);
+}
+
+.section-icon {
+  display: inline-block;
+  width: 1.15em;
+  margin-right: 0.35em;
+  color: currentColor;
+  font-size: 1em;
+  line-height: 1;
+  text-align: center;
+  vertical-align: -0.06em;
 }
 
 /*Simple css to style it like a toggle switch*/
@@ -132,6 +147,55 @@ input:checked + .slider:before {
   margin-right: 60px; /* Adjust this value to align with content */
 }
 
+.talk-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  column-gap: 20px;
+  padding: 0 0 24px 17px;
+  border-left: 2px solid var(--timeline-line-color);
+}
+
+.talk-entry:last-child {
+  padding-bottom: 0;
+}
+
+.talk-entry::before {
+  position: absolute;
+  top: 0.48em;
+  left: -6px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  background: var(--bg-color);
+  box-sizing: border-box;
+  content: "";
+}
+
+.date-badge {
+  color: var(--timeline-muted-color);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+}
+
+.talk-content {
+  min-width: 0;
+}
+
+.talk-content p {
+  margin: -2px 0 0;
+}
+
+@media (max-width: 640px) {
+  .talk-entry {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 3px;
+  }
+}
+
 </style>
 
 <body>
@@ -196,96 +260,93 @@ input:checked + .slider:before {
                 <div style="margin-top:5vh; text-align:justify;">
 
       <div  style="text-align:left;">
-          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><b>Talks/Seminars/Presentations</b></div><br>
+          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><i class="section-icon fas fa-microphone-alt" aria-hidden="true"></i><b>Talks/Seminars/Presentations</b></div><br>
 
 
-          <div class="talk-entry" style="margin-bottom: 30px;">
-              <div class="date-badge" style="float: left; margin-right: 15px; text-align: center; min-width: 80px; background-color: var(--font-color); color: var(--bg-color); padding: 8px; border-radius: 5px; font-size: 14px;">
+          <div class="talk-entry">
+              <div class="date-badge">
+                  <div style="font-weight: bold;">01 Aug</div>
+                  <div>2026</div>
+              </div>
+              <div class="talk-content">
+                  <p><b>在真实情境中学会表达：AI智能体赋能语言沟通训练</b><br>
+                      “智联温港·数育未来”温港两地校长共话“AI+教育”专题分享会，<b>温州</b>
+                      [<a href="https://mp.weixin.qq.com/s/-YjHrwtBd1yWjOVTR17a1g" target="_blank" rel="noopener noreferrer">news</a>]<br>
+                  </p>
+              </div>
+          </div>
+          <div class="talk-entry">
+              <div class="date-badge">
                   <div style="font-weight: bold;">09 May</div>
                   <div>2026</div>
               </div>
-              <div class="talk-content" style="overflow: hidden;">
+              <div class="talk-content">
                   <p><b>PolyInterview: A Multi-agent Platform for Immersive and Personalized Interview Practice</b><br>
                       International Conference on Intelligence (ICI 2026), <b>Zhuhai</b>
                       [<a href="https://ici2026.intelligence-conf.com/agenda/" target="_blank">agenda</a>]<br>
                   </p>
               </div>
           </div>
-          <div style="clear: both;"></div>
-
-
-          <div class="talk-entry" style="margin-bottom: 30px;">
-              <div class="date-badge" style="float: left; margin-right: 15px; text-align: center; min-width: 80px; background-color: var(--font-color); color: var(--bg-color); padding: 8px; border-radius: 5px; font-size: 14px;">
+          <div class="talk-entry">
+              <div class="date-badge">
                   <div style="font-weight: bold;">27 Apr</div>
                   <div>2026</div>
               </div>
-              <div class="talk-content" style="overflow: hidden;">
+              <div class="talk-content">
                   <p><b>AI as a Tool for Learning Interview Skills</b><br>
                       ETI Salon #6, IHERD, PolyU, <b>Hong Kong</b>
                       [<a href="https://www.polyu.edu.hk/iherd/news-and-events/news/2026/20260427-6th-eti-salon/" target="_blank">news</a>]<br>
                   </p>
               </div>
           </div>
-          <div style="clear: both;"></div>
-
-
-          <div class="talk-entry" style="margin-bottom: 30px;">
-              <div class="date-badge" style="float: left; margin-right: 15px; text-align: center; min-width: 80px; background-color: var(--font-color); color: var(--bg-color); padding: 8px; border-radius: 5px; font-size: 14px;">
+          <div class="talk-entry">
+              <div class="date-badge">
                   <div style="font-weight: bold;">27 Jan</div>
                   <div>2026</div>
               </div>
-              <div class="talk-content" style="overflow: hidden;">
+              <div class="talk-content">
                   <p><b>LLM-based Multi-Agent System for Language Learning</b><br>
                       RIAIoT Lunch Seminar Series, PolyU, <b>Hong Kong</b>
                       [<a href="files/news/RIAIoT_Lunch_Seminar_2026.jpg" target="_blank">poster</a>]<br>
                   </p>
               </div>
           </div>
-          <div style="clear: both;"></div>
-
-
-          <div class="talk-entry" style="margin-bottom: 30px;">
-              <div class="date-badge" style="float: left; margin-right: 15px; text-align: center; min-width: 80px; background-color: var(--font-color); color: var(--bg-color); padding: 8px; border-radius: 5px; font-size: 14px;">
+          <div class="talk-entry">
+              <div class="date-badge">
                   <div style="font-weight: bold;">25 Nov</div>
                   <div>2025</div>
               </div>
-              <div class="talk-content" style="overflow: hidden;">
+              <div class="talk-content">
                   <p><b>LLM-based Multi-Agent System for Language Learning</b><br>
                       AI Innovations & Entrepreneurship Workshop, Lingnan University, <b>Hong Kong</b>
                       [<a href="https://mp.weixin.qq.com/s/9gR96Hko4z_mv5-xvPfl-w" target="_blank">news</a>]<br>
                   </p>
               </div>
           </div>
-          <div style="clear: both;"></div>
-
-          
-          <div class="talk-entry" style="margin-bottom: 30px;">
-              <div class="date-badge" style="float: left; margin-right: 15px; text-align: center; min-width: 80px; background-color: var(--font-color); color: var(--bg-color); padding: 8px; border-radius: 5px; font-size: 14px;">
+          <div class="talk-entry">
+              <div class="date-badge">
                   <div style="font-weight: bold;">22 Nov</div>
                   <div>2025</div>
               </div>
-              <div class="talk-content" style="overflow: hidden;">
+              <div class="talk-content">
                   <p><b>LLM-based Multi-Agent Language Learning: Personalized Tutoring and Contextual Simulation</b><br>
                       中山大学软件工程学院博学论坛 第四十五期, <b>珠海</b>
                       [<a href="files/news/SYSU_Boxue_Forum_45.jpg" target="_blank">poster</a>]<br>
                   </p>
               </div>
           </div>
-          <div style="clear: both;"></div>
-
-          <div class="talk-entry" style="margin-bottom: 30px;">
-              <div class="date-badge" style="float: left; margin-right: 15px; text-align: center; min-width: 80px; background-color: var(--font-color); color: var(--bg-color); padding: 8px; border-radius: 5px; font-size: 14px;">
+          <div class="talk-entry">
+              <div class="date-badge">
                   <div style="font-weight: bold;">08 Nov</div>
                   <div>2025</div>
               </div>
-              <div class="talk-content" style="overflow: hidden;">
+              <div class="talk-content">
                   <p><b>FollowUpBot: 基于端侧大语言模型的智能医疗随访机器人</b><br>
                       2025⼤数据分会学术年会暨围术期医学⼤模型创建论坛，第⼆届国际医疗健康⼈⼯智能⼤会暨医疗场景拥抱⼈⼯智能技术会议, <b>天津</b>
                       [<a href="files/news/Tianjin_Perioperative_AI_Forum_2025.jpg" target="_blank">agenda</a>]<br>
                   </p>
               </div>
           </div>
-          <div style="clear: both;"></div>
           
 
 

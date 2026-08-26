@@ -64,6 +64,32 @@ a:hover {
     color: var(--primary-color);
 }
 
+.section-icon {
+    display: inline-block;
+    width: 1.15em;
+    margin-right: 0.35em;
+    color: currentColor;
+    font-size: 1em;
+    line-height: 1;
+    text-align: center;
+    vertical-align: -0.06em;
+}
+
+.demo-category {
+    margin-top: 32px;
+}
+
+.demo-category-title {
+    margin: 0 0 22px;
+    padding-left: 11px;
+    border-left: 4px solid var(--primary-color);
+    color: var(--heading-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
 /*Simple css to style it like a toggle switch*/
 .theme-switch-wrapper {
   display: flex;
@@ -196,97 +222,141 @@ input:checked + .slider:before {
                 <div style="margin-top:5vh; text-align:justify;">
 
       <div  style="text-align:left;">
-          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><b>Interesting Demos :)</b></div><br>
-          
-          <div class="demo-entry" style="display: flex; align-items: flex-start; margin-bottom: 30px;">
-              <div class="demo-thumbnail" style="flex: 0 0 150px; margin-right: 20px; position: relative;">
-                  <img src="img/InteractiveSurvey_img.png" alt="Demo Thumbnail" style="width: 100%; height: auto; border-radius: 5px; max-height: 100px; object-fit: cover;" class="thumbnail-img">
-                  <div class="zoom-indicator" style="position: absolute; top: 5px; right: 5px; background-color: rgba(0,0,0,0.6); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; opacity: 0.8;">
-                      <i class="fas fa-search-plus"></i>
-                  </div>
-                  <div class="large-image-popup" style="position: absolute; top: 0; left: 100%; width: 600px; background-color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-radius: 8px; z-index: 1000; display: none; margin-left: 10px; padding: 5px;">
-                      <img src="img/InteractiveSurvey_img.png" alt="Demo Large View" style="width: 100%; height: auto; border-radius: 5px;">
-                  </div>
-              </div>
-              <div class="demo-content">
-                  <p><b>InteractiveSurvey: An LLM-based Personalized and Interactive Survey Paper Generation System</b><br>
-                  Zhiyuan Wen, Jiannong Cao, Zian Wang, Beichen Guo, Ruosong Yang, Shuaiqi Liu<br>
-                  <i>Arxiv Preprint</i><br>
-                  [<a href="https://arxiv.org/abs/2504.08762" target="_blank">Demo Paper</a>] [<a href="https://technicolorguo.github.io/InteractiveSurvey/" target="_blank">Introduction Page (with Demo Video)</a>]</p>
-              </div>
-          </div>
+          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><i class="section-icon fas fa-laptop-code" aria-hidden="true"></i><b>Interesting Demos :)</b></div><br>
 
-          <div class="demo-entry" style="display: flex; align-items: flex-start; margin-bottom: 30px;">
-              <div class="demo-thumbnail" style="flex: 0 0 150px; margin-right: 20px; position: relative;">
-                  <img src="img/FollowupBot.png" alt="Demo Thumbnail" style="width: 100%; height: auto; border-radius: 5px; max-height: 100px; object-fit: cover;" class="thumbnail-img">
-                  <div class="zoom-indicator" style="position: absolute; top: 5px; right: 5px; background-color: rgba(0,0,0,0.6); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; opacity: 0.8;">
-                      <i class="fas fa-search-plus"></i>
-                  </div>
-                  <div class="large-image-popup" style="position: absolute; top: 0; left: 100%; width: 600px; background-color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-radius: 8px; z-index: 1000; display: none; margin-left: 10px; padding: 5px;">
-                      <img src="img/FollowupBot.png" alt="Demo Large View" style="width: 100%; height: auto; border-radius: 5px;">
-                  </div>
-              </div>
-              <div class="demo-content">
-                  <p><b>FollowUpBot: An LLM-Based Conversational Robot for Automatic Postoperative Follow-up</b>  <small>Collaboration with Guangdong Provincial People's Hospital (广东省人民医院)</small> <br>
-                      Chen Chen, Jianing Yin, Jiannong Cao, Zhiyuan Wen, Mingjin Zhang, Weixun Gao,
-                      Xiang Wang, Haihua Shu<br>
-                  <i>The 12th International Conference on Behavioural and Social Computing (BESC'25)</i><br>
-                  [<a href="https://arxiv.org/abs/2507.15502" target="_blank">Demo Paper</a>] [<a href="https://www.bilibili.com/video/BV1G281zCEBV?vd_source=888fe95b17b2daeda8871b708dd978f3" target="_blank">Introduction Video (Bilibili)</a>]</p>
-              </div>
-          </div>
+          <section class="demo-category" aria-labelledby="communication-demos">
+              <h2 id="communication-demos" class="demo-category-title"><i class="section-icon fas fa-comments" aria-hidden="true"></i>Multi-Agent Systems for Language and Communication Skill Learning</h2>
 
-          <div class="demo-entry" style="display: flex; align-items: flex-start; margin-bottom: 30px;">
-              <div class="demo-thumbnail" style="flex: 0 0 150px; margin-right: 20px; position: relative;">
-                  <img src="img/CodeEdu.png" alt="Demo Thumbnail" style="width: 100%; height: auto; border-radius: 5px; max-height: 100px; object-fit: cover;" class="thumbnail-img">
-                  <div class="zoom-indicator" style="position: absolute; top: 5px; right: 5px; background-color: rgba(0,0,0,0.6); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; opacity: 0.8;">
-                      <i class="fas fa-search-plus"></i>
+              <div class="demo-entry" style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+                  <div class="demo-thumbnail" style="flex: 0 0 150px; margin-right: 20px; position: relative;">
+                      <img src="img/PolyInterview.png" alt="PolyInterview demo thumbnail" style="width: 100%; height: auto; border-radius: 5px; max-height: 100px; object-fit: cover;" class="thumbnail-img">
+                      <div class="zoom-indicator" style="position: absolute; top: 5px; right: 5px; background-color: rgba(0,0,0,0.6); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; opacity: 0.8;">
+                          <i class="fas fa-search-plus"></i>
+                      </div>
+                      <div class="large-image-popup" style="position: absolute; top: 0; left: 100%; width: 600px; background-color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-radius: 8px; z-index: 1000; display: none; margin-left: 10px; padding: 5px;">
+                          <img src="img/PolyInterview.png" alt="PolyInterview demo large view" style="width: 100%; height: auto; border-radius: 5px;">
+                      </div>
                   </div>
-                  <div class="large-image-popup" style="position: absolute; top: 0; left: 100%; width: 600px; background-color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-radius: 8px; z-index: 1000; display: none; margin-left: 10px; padding: 5px;">
-                      <img src="img/CodeEdu.png" alt="Demo Large View" style="width: 100%; height: auto; border-radius: 5px;">
+                  <div class="demo-content">
+                      <p><b>PolyInterview: An LLM-based Platform for Immersive Mock Interview Practice with Comprehensive Multimodal Assessment</b><br>
+                          Zhiyuan Wen, Jiannong Cao, Kelly Chan, Zijian Wang, Chen Chen, Xiaoyun Liu, Jianing Yin, Zhuo Li<br>
+                          <i>Arxiv Preprint</i><br>
+                          [<a href="https://arxiv.org/abs/2607.10310" target="_blank" rel="noopener noreferrer">Demo Paper</a>]
+                          [<a href="https://dannywang1922.github.io/polyinterview/" target="_blank" rel="noopener noreferrer">Demo Introduction Page</a>]
+                          [<a href="https://youtu.be/zo8JikB80IY" target="_blank" rel="noopener noreferrer">Demo Video (Youtube)</a>]
+                      </p>
                   </div>
               </div>
-              <div class="demo-content">
-                  <p><b>CodeEdu: A Multi-Agent Collaborative Platform for Personalized Coding Education</b> <small>Collaboration with China Mobile (Hong Kong) Innovation and Research Institute</small> <br>
-                      Jianing Zhao, Peng Gao, Jiannong Cao, Zhiyuan Wen, Chen Chen, Jianing Yin, Ruosong Yang, Bo Yuan<br>
-                  <i>The 12th International Conference on Behavioural and Social Computing (BESC'25)</i><br>
-                  [<a href="https://arxiv.org/pdf/2507.13814" target="_blank">Demo Paper</a>] [<a href="https://youtu.be/9iIVmTT4CVk" target="_blank">Demo Video (Youtube)</a>] [<a href="https://github.com/EskimosNing/codeedu" target="_blank">Code</a>] </p>
-              </div>
-          </div>
 
-          <div class="demo-entry" style="display: flex; align-items: flex-start; margin-bottom: 30px;">
-              <div class="demo-thumbnail" style="flex: 0 0 150px; margin-right: 20px; position: relative;">
-                  <img src="img/PolyInterview.png" alt="Demo Thumbnail" style="width: 100%; height: auto; border-radius: 5px; max-height: 100px; object-fit: cover;" class="thumbnail-img">
-                  <div class="zoom-indicator" style="position: absolute; top: 5px; right: 5px; background-color: rgba(0,0,0,0.6); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; opacity: 0.8;">
-                      <i class="fas fa-search-plus"></i>
+              <div class="demo-entry" style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+                  <div class="demo-thumbnail" style="flex: 0 0 150px; margin-right: 20px; position: relative;">
+                      <img src="https://arxiv.org/html/2608.12857v1/rehearsal_interface.png" alt="PolyPresentation demo interface thumbnail" style="width: 100%; height: auto; border-radius: 5px; max-height: 100px; object-fit: cover;" class="thumbnail-img">
+                      <div class="zoom-indicator" style="position: absolute; top: 5px; right: 5px; background-color: rgba(0,0,0,0.6); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; opacity: 0.8;">
+                          <i class="fas fa-search-plus"></i>
+                      </div>
+                      <div class="large-image-popup" style="position: absolute; top: 0; left: 100%; width: 600px; background-color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-radius: 8px; z-index: 1000; display: none; margin-left: 10px; padding: 5px;">
+                          <img src="https://arxiv.org/html/2608.12857v1/rehearsal_interface.png" alt="PolyPresentation demo interface large view" style="width: 100%; height: auto; border-radius: 5px;">
+                      </div>
                   </div>
-                  <div class="large-image-popup" style="position: absolute; top: 0; left: 100%; width: 600px; background-color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-radius: 8px; z-index: 1000; display: none; margin-left: 10px; padding: 5px;">
-                      <img src="img/PolyInterview.png" alt="Demo Large View" style="width: 100%; height: auto; border-radius: 5px;">
+                  <div class="demo-content">
+                      <p><b>PolyPresentation: A Multimodal AI Platform for Slide-Aware Iterative Presentation Practice</b><br>
+                          Chen Chen, Jihao Li, Zhiyuan Wen, Tianhui Zhang, Di Zou, Jiannong Cao<br>
+                          <i>The 13th International Conference on Behavioural and Social Computing (BESC'26)</i><br>
+                          [<a href="https://arxiv.org/abs/2608.12857" target="_blank" rel="noopener noreferrer">Demo Paper</a>]
+                          [<a href="https://youtu.be/MmWj9O_PJxw" target="_blank" rel="noopener noreferrer">Demo Video (Youtube)</a>]
+                      </p>
                   </div>
               </div>
-              <div class="demo-content">
-                  <p><b>PolyInterview: Personalized and Multi-modal Interview Simulation with LLM Agents</b>  <br>
-                      Zhiyuan Wen, Xiaoyun Liu, Zijian Wang, Chen Chen, Jialun Zheng, Jianing Yin, Haochen Shi, Jiannong Cao<br>
 
-                      [<a href="https://github.com/ACCFOOL/PolyInterview" target="_blank">Demo Introduction Page</a>] [<a href="https://youtu.be/zo8JikB80IY" target="_blank">Demo Video (Youtube)</a>] </p>
+              <div class="demo-entry" style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+                  <div class="demo-thumbnail" style="flex: 0 0 150px; margin-right: 20px; position: relative;">
+                      <img src="img/DebateArena.png" alt="PolyDebate demo thumbnail" style="width: 100%; height: auto; border-radius: 5px; max-height: 100px; object-fit: cover;" class="thumbnail-img">
+                      <div class="zoom-indicator" style="position: absolute; top: 5px; right: 5px; background-color: rgba(0,0,0,0.6); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; opacity: 0.8;">
+                          <i class="fas fa-search-plus"></i>
+                      </div>
+                      <div class="large-image-popup" style="position: absolute; top: 0; left: 100%; width: 600px; background-color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-radius: 8px; z-index: 1000; display: none; margin-left: 10px; padding: 5px;">
+                          <img src="img/DebateArena.png" alt="PolyDebate demo large view" style="width: 100%; height: auto; border-radius: 5px;">
+                      </div>
+                  </div>
+                  <div class="demo-content">
+                      <p><b>PolyDebate: A Game-Orchestrated Multimodal System for Debate Skills Practice and Evaluation</b><br>
+                          Jianing Yin, Weng Pan Kuan, Xiaoyun Liu, Zhiyuan Wen, Yuxuan Li, Milos Stojmenovic, Jiannong Cao<br>
+                          <i>The 13th International Conference on Behavioural and Social Computing (BESC'26)</i><br>
+                          [<a href="https://arxiv.org/abs/2608.16276" target="_blank" rel="noopener noreferrer">Demo Paper</a>]
+                          [<a href="https://youtu.be/mHwBG1_8Ebk" target="_blank" rel="noopener noreferrer">Demo Video (Youtube)</a>]
+                      </p>
+                  </div>
               </div>
-          </div>
+          </section>
 
-          <div class="demo-entry" style="display: flex; align-items: flex-start; margin-bottom: 30px;">
-              <div class="demo-thumbnail" style="flex: 0 0 150px; margin-right: 20px; position: relative;">
-                  <img src="img/DebateArena.png" alt="Demo Thumbnail" style="width: 100%; height: auto; border-radius: 5px; max-height: 100px; object-fit: cover;" class="thumbnail-img">
-                  <div class="zoom-indicator" style="position: absolute; top: 5px; right: 5px; background-color: rgba(0,0,0,0.6); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; opacity: 0.8;">
-                      <i class="fas fa-search-plus"></i>
+          <section class="demo-category" aria-labelledby="education-demos">
+              <h2 id="education-demos" class="demo-category-title"><i class="section-icon fas fa-user-graduate" aria-hidden="true"></i>AI for Education</h2>
+
+              <div class="demo-entry" style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+                  <div class="demo-thumbnail" style="flex: 0 0 150px; margin-right: 20px; position: relative;">
+                      <img src="img/InteractiveSurvey_img.png" alt="InteractiveSurvey demo thumbnail" style="width: 100%; height: auto; border-radius: 5px; max-height: 100px; object-fit: cover;" class="thumbnail-img">
+                      <div class="zoom-indicator" style="position: absolute; top: 5px; right: 5px; background-color: rgba(0,0,0,0.6); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; opacity: 0.8;">
+                          <i class="fas fa-search-plus"></i>
+                      </div>
+                      <div class="large-image-popup" style="position: absolute; top: 0; left: 100%; width: 600px; background-color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-radius: 8px; z-index: 1000; display: none; margin-left: 10px; padding: 5px;">
+                          <img src="img/InteractiveSurvey_img.png" alt="InteractiveSurvey demo large view" style="width: 100%; height: auto; border-radius: 5px;">
+                      </div>
                   </div>
-                  <div class="large-image-popup" style="position: absolute; top: 0; left: 100%; width: 600px; background-color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-radius: 8px; z-index: 1000; display: none; margin-left: 10px; padding: 5px;">
-                      <img src="img/DebateArena.png" alt="Demo Large View" style="width: 100%; height: auto; border-radius: 5px;">
+                  <div class="demo-content">
+                      <p><b>InteractiveSurvey: An LLM-based Personalized and Interactive Survey Paper Generation System</b><br>
+                          Zhiyuan Wen, Jiannong Cao, Zian Wang, Beichen Guo, Ruosong Yang, Shuaiqi Liu<br>
+                          <i>Arxiv Preprint</i><br>
+                          [<a href="https://arxiv.org/abs/2504.08762" target="_blank">Demo Paper</a>]
+                          [<a href="https://technicolorguo.github.io/InteractiveSurvey/" target="_blank">Introduction Page (with Demo Video)</a>]
+                      </p>
                   </div>
               </div>
-              <div class="demo-content">
-                  <p><b>DebateArena: Multi-modal Debate Skill Practice with LLM Agents</b>  <br>
-                      Jianing Yin, Zhiyuan Wen, Zijian Wang, Chen Chen, Jiannong Cao<br>
-                      [<a href="https://www.bilibili.com/video/BV1di63BZEss" target="_blank">Demo Video (Bilibili)</a>] </p>
+
+              <div class="demo-entry" style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+                  <div class="demo-thumbnail" style="flex: 0 0 150px; margin-right: 20px; position: relative;">
+                      <img src="img/CodeEdu.png" alt="CodeEdu demo thumbnail" style="width: 100%; height: auto; border-radius: 5px; max-height: 100px; object-fit: cover;" class="thumbnail-img">
+                      <div class="zoom-indicator" style="position: absolute; top: 5px; right: 5px; background-color: rgba(0,0,0,0.6); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; opacity: 0.8;">
+                          <i class="fas fa-search-plus"></i>
+                      </div>
+                      <div class="large-image-popup" style="position: absolute; top: 0; left: 100%; width: 600px; background-color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-radius: 8px; z-index: 1000; display: none; margin-left: 10px; padding: 5px;">
+                          <img src="img/CodeEdu.png" alt="CodeEdu demo large view" style="width: 100%; height: auto; border-radius: 5px;">
+                      </div>
+                  </div>
+                  <div class="demo-content">
+                      <p><b>CodeEdu: A Multi-Agent Collaborative Platform for Personalized Coding Education</b> <small>Collaboration with China Mobile (Hong Kong) Innovation and Research Institute</small><br>
+                          Jianing Zhao, Peng Gao, Jiannong Cao, Zhiyuan Wen, Chen Chen, Jianing Yin, Ruosong Yang, Bo Yuan<br>
+                          <i>The 12th International Conference on Behavioural and Social Computing (BESC'25)</i><br>
+                          [<a href="https://arxiv.org/pdf/2507.13814" target="_blank">Demo Paper</a>]
+                          [<a href="https://youtu.be/9iIVmTT4CVk" target="_blank">Demo Video (Youtube)</a>]
+                          [<a href="https://github.com/EskimosNing/codeedu" target="_blank">Code</a>]
+                      </p>
+                  </div>
               </div>
-          </div>
+          </section>
+
+          <section class="demo-category" aria-labelledby="healthcare-demos">
+              <h2 id="healthcare-demos" class="demo-category-title"><i class="section-icon fas fa-heartbeat" aria-hidden="true"></i>AI for Healthcare</h2>
+
+              <div class="demo-entry" style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+                  <div class="demo-thumbnail" style="flex: 0 0 150px; margin-right: 20px; position: relative;">
+                      <img src="img/FollowupBot.png" alt="FollowUpBot demo thumbnail" style="width: 100%; height: auto; border-radius: 5px; max-height: 100px; object-fit: cover;" class="thumbnail-img">
+                      <div class="zoom-indicator" style="position: absolute; top: 5px; right: 5px; background-color: rgba(0,0,0,0.6); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; opacity: 0.8;">
+                          <i class="fas fa-search-plus"></i>
+                      </div>
+                      <div class="large-image-popup" style="position: absolute; top: 0; left: 100%; width: 600px; background-color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-radius: 8px; z-index: 1000; display: none; margin-left: 10px; padding: 5px;">
+                          <img src="img/FollowupBot.png" alt="FollowUpBot demo large view" style="width: 100%; height: auto; border-radius: 5px;">
+                      </div>
+                  </div>
+                  <div class="demo-content">
+                      <p><b>FollowUpBot: An LLM-Based Conversational Robot for Automatic Postoperative Follow-up</b> <small>Collaboration with Guangdong Provincial People's Hospital (广东省人民医院)</small><br>
+                          Chen Chen, Jianing Yin, Jiannong Cao, Zhiyuan Wen, Mingjin Zhang, Weixun Gao, Xiang Wang, Haihua Shu<br>
+                          <i>The 12th International Conference on Behavioural and Social Computing (BESC'25)</i><br>
+                          [<a href="https://arxiv.org/abs/2507.15502" target="_blank">Demo Paper</a>]
+                          [<a href="https://www.bilibili.com/video/BV1G281zCEBV?vd_source=888fe95b17b2daeda8871b708dd978f3" target="_blank">Introduction Video (Bilibili)</a>]
+                      </p>
+                  </div>
+              </div>
+          </section>
 
 
 
