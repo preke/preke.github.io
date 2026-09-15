@@ -90,6 +90,18 @@ a:hover {
     line-height: 1.35;
 }
 
+@media (max-width: 600px) {
+    #scenarios-learning-hub {
+        flex-direction: column;
+    }
+
+    #scenarios-learning-hub .demo-thumbnail {
+        flex-basis: auto !important;
+        width: 150px;
+        margin-bottom: 12px;
+    }
+}
+
 /*Simple css to style it like a toggle switch*/
 .theme-switch-wrapper {
   display: flex;
@@ -291,6 +303,24 @@ input:checked + .slider:before {
 
           <section class="demo-category" aria-labelledby="education-demos">
               <h2 id="education-demos" class="demo-category-title"><i class="section-icon fas fa-user-graduate" aria-hidden="true"></i>AI for Education</h2>
+
+              <div id="scenarios-learning-hub" class="demo-entry" style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+                  <div class="demo-thumbnail" style="flex: 0 0 150px; margin-right: 20px; position: relative;">
+                      <a href="demos/scenarios-learning-hub/" aria-label="Launch Scenarios Learning Hub">
+                          <img src="img/ScenariosLearningHub.jpg" alt="Scenarios Learning Hub robot arm teaching lab preview" style="width: 100%; height: auto; border-radius: 5px; max-height: 100px; object-fit: cover;" class="thumbnail-img" loading="lazy">
+                      </a>
+                      <div class="large-image-popup" style="position: absolute; top: 0; left: 100%; width: 600px; background-color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-radius: 8px; z-index: 1000; display: none; margin-left: 10px; padding: 5px;">
+                          <img src="img/ScenariosLearningHub.jpg" alt="Scenarios Learning Hub robot arm teaching lab large view" style="width: 100%; height: auto; border-radius: 5px;" loading="lazy">
+                      </div>
+                  </div>
+                  <div class="demo-content">
+                      <p><b><a href="demos/scenarios-learning-hub/">Scenarios Learning Hub: <span lang="zh-CN">场景教学实验室</span></a></b><br>
+                          Explore a robot arm pick-and-place scenario through an interactive 3D model, joint-motion experiments, a knowledge map, and a guided action-planning activity.<br>
+                          <i>Interactive teaching demo with a local knowledge-based Tutor</i><br>
+                          [<a href="demos/scenarios-learning-hub/">Launch Demo / <span lang="zh-CN">进入实验室</span></a>]
+                      </p>
+                  </div>
+              </div>
 
               <div class="demo-entry" style="display: flex; align-items: flex-start; margin-bottom: 30px;">
                   <div class="demo-thumbnail" style="flex: 0 0 150px; margin-right: 20px; position: relative;">
