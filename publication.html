@@ -34,10 +34,7 @@
     --heading-color: #292922;
     --timeline-line-color: #D7E7F6;
     --timeline-muted-color: #60778C;
-    --ccf-a-bg: #1B6FC2;
     --ccf-a-text: #FFFFFF;
-    --ccf-b-bg: #DCEFFC;
-    --ccf-b-text: #245B87;
 }
 
 [data-theme="dark"] {
@@ -48,10 +45,7 @@
     --heading-color: #818cab;
     --timeline-line-color: #315065;
     --timeline-muted-color: #A9C7D1;
-    --ccf-a-bg: #7ED4E5;
     --ccf-a-text: #13242B;
-    --ccf-b-bg: #29434F;
-    --ccf-b-text: #C5EAF1;
 }
 
 hr {
@@ -123,6 +117,18 @@ a:hover {
     line-height: 1.4;
 }
 
+.publication-summary {
+    margin: 0.5em 0 1.5em;
+    color: var(--timeline-muted-color);
+    font-size: 13px;
+}
+
+#publication-counts > span {
+    display: inline-block;
+    margin-right: 1em;
+    white-space: nowrap;
+}
+
 .publication-venue {
     font-size: 13px;
     font-weight: 700;
@@ -138,25 +144,22 @@ a:hover {
 
 .publication-rank {
     display: inline-block;
-    padding: 1px 6px;
+    padding: 2px 7px;
+    border: 1px solid var(--primary-color);
     border-radius: 999px;
-    font-size: 10px;
+    background: transparent;
+    color: var(--primary-color);
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.045em;
-    line-height: 1.45;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
     vertical-align: 1px;
     white-space: nowrap;
 }
 
 .publication-rank--a {
-    background: var(--ccf-a-bg);
+    background: var(--primary-color);
     color: var(--ccf-a-text);
-}
-
-.publication-rank--b,
-.publication-rank--c {
-    background: var(--ccf-b-bg);
-    color: var(--ccf-b-text);
 }
 
 .publication-content {
@@ -320,7 +323,11 @@ input:checked + .slider:before {
                 <div style="margin-top:5vh; text-align:justify;">
 
       <div  style="text-align:left;">
-      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><i class="section-icon fas fa-book-open" aria-hidden="true"></i><b>Selected Publications</b> <small style="font-size:x-small"><a href="https://scholar.google.com/citations?user=bLhErOwAAAAJ&amp;hl=zh-CN">(Full List on Google Scholar)</a> </small></div><br>
+      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><i class="section-icon fas fa-book-open" aria-hidden="true"></i><b>Selected Publications</b> <small style="font-size:x-small"><a href="https://scholar.google.com/citations?user=bLhErOwAAAAJ&amp;hl=zh-CN">(Full List on Google Scholar)</a> </small></div>
+      <div class="publication-summary">
+          <div id="publication-counts"></div>
+          Venue ranks follow the <a href="https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml">2026 CCF directory</a>. This page counts Findings papers under their parent conference.
+      </div>
 
           <div class="publication-entry" id="llm4rail">
               <div class="publication-badge">
@@ -422,7 +429,7 @@ input:checked + .slider:before {
           </div>
 
           <div class="publication-entry">
-              <div class="publication-badge"><div class="publication-venue">ADMA 2025</div><div class="publication-meta">CCF-C</div></div>
+              <div class="publication-badge"><div class="publication-venue">ADMA 2025</div><div class="publication-meta"><span class="publication-rank publication-rank--c">CCF-C</span></div></div>
               <p class="publication-content">Beichen Guo, <b>Zhiyuan Wen</b>, Yu Yang, Peng Gao, Ruosong Yang, Jiaxing Shen. <b>SGSimEval: A Comprehensive Multifaceted and Similarity-Enhanced Benchmark for Automatic Survey Generation Systems</b><br>
                   <span class="publication-details">The 21st International Conference on Advanced Data Mining and Applications, pp. 393&ndash;407.</span><br>
                   <span class="publication-links">[<a href="https://doi.org/10.1007/978-981-95-3456-2_27" target="_blank" rel="noopener noreferrer">Paper</a>] [<a href="https://arxiv.org/abs/2508.11310" target="_blank" rel="noopener noreferrer">Preprint</a>]</span>
@@ -461,6 +468,14 @@ input:checked + .slider:before {
               </p>
           </div>
 
+          <div class="publication-entry" id="tkde-2024">
+              <div class="publication-badge"><div class="publication-venue">TKDE</div><div class="publication-meta">2024 · <span class="publication-rank publication-rank--a">CCF-A</span></div></div>
+              <p class="publication-content">Shuaiqi Liu, Jiannong Cao, Zhongfen Deng, Wenting Zhao, Ruosong Yang, <b>Zhiyuan Wen</b>, Philip S. Yu. <b>Neural Abstractive Summarization for Long Text and Multiple Tables</b><br>
+                  <span class="publication-details">IEEE Transactions on Knowledge and Data Engineering, 36(6), 2572&ndash;2586, 2024.</span><br>
+                  <span class="publication-links">[<a href="https://doi.org/10.1109/TKDE.2023.3324012" target="_blank" rel="noopener noreferrer">Paper</a>]</span>
+              </p>
+          </div>
+
           <div class="publication-entry">
               <div class="publication-badge"><div class="publication-venue">PerCom 2024</div><div class="publication-meta"><span class="publication-rank publication-rank--b">CCF-B</span></div></div>
               <p class="publication-content"><b>Zhiyuan Wen</b>, Jiannong Cao, Yu Yang, Ruosong Yang, Shuaiqi Liu. <b>Affective-NLI: Towards Accurate and Interpretable Personality Recognition in Conversation</b><br>
@@ -478,14 +493,68 @@ input:checked + .slider:before {
           </div>
 
           <div class="publication-entry">
-              <div class="publication-badge"><div class="publication-venue">ACL-IJCNLP</div><div class="publication-meta">2021 · <span class="publication-rank publication-rank--a">CCF-A</span></div></div>
+              <div class="publication-badge"><div class="publication-venue">EMNLP 2022</div><div class="publication-meta">Findings · <span class="publication-rank publication-rank--b">CCF-B</span></div></div>
+              <p class="publication-content">Shuaiqi Liu, Jiannong Cao, Ruosong Yang, <b>Zhiyuan Wen</b>. <b>Long Text and Multi-Table Summarization: Dataset and Method</b><br>
+                  <span class="publication-details">Findings of the Association for Computational Linguistics: EMNLP 2022, pp. 1995&ndash;2010.</span><br>
+                  <span class="publication-links">[<a href="https://aclanthology.org/2022.findings-emnlp.145/" target="_blank" rel="noopener noreferrer">Paper</a>]</span>
+              </p>
+          </div>
+
+          <div class="publication-entry">
+              <div class="publication-badge"><div class="publication-venue">TSE</div><div class="publication-meta">2022 · <span class="publication-rank publication-rank--a">CCF-A</span></div></div>
+              <p class="publication-content">Cuiyun Gao, Jichuan Zeng, <b>Zhiyuan Wen</b>, David Lo, Xin Xia, Irwin King, Michael R. Lyu. <b>Emerging App Issue Identification via Online Joint Sentiment-Topic Tracing</b><br>
+                  <span class="publication-details">IEEE Transactions on Software Engineering, 48(8), 3025&ndash;3043, 2022.</span><br>
+                  <span class="publication-links">[<a href="https://doi.org/10.1109/TSE.2021.3076179" target="_blank" rel="noopener noreferrer">Paper</a>]</span>
+              </p>
+          </div>
+
+          <div class="publication-entry">
+              <div class="publication-badge"><div class="publication-venue">IJCAI 2022</div><div class="publication-meta"><span class="publication-rank publication-rank--b">CCF-B</span></div></div>
+              <p class="publication-content">Shuaiqi Liu, Jiannong Cao, Ruosong Yang, <b>Zhiyuan Wen</b>. <b>Generating a Structured Summary of Numerous Academic Papers: Dataset and Method</b><br>
+                  <span class="publication-details">The 31st International Joint Conference on Artificial Intelligence, Main Track, pp. 4259&ndash;4265.</span><br>
+                  <span class="publication-links">[<a href="https://www.ijcai.org/proceedings/2022/591" target="_blank" rel="noopener noreferrer">Paper</a>]</span>
+              </p>
+          </div>
+
+          <div class="publication-entry">
+              <div class="publication-badge"><div class="publication-venue">IPM</div><div class="publication-meta">2022 · <span class="publication-rank publication-rank--b">CCF-B</span></div></div>
+              <p class="publication-content">Shuaiqi Liu, Jiannong Cao, Ruosong Yang, <b>Zhiyuan Wen</b>. <b>Key phrase aware transformer for abstractive summarization</b><br>
+                  <span class="publication-details">Information Processing &amp; Management, 59(3), 102913, 2022.</span><br>
+                  <span class="publication-links">[<a href="https://doi.org/10.1016/j.ipm.2022.102913" target="_blank" rel="noopener noreferrer">Paper</a>]</span>
+              </p>
+          </div>
+
+          <div class="publication-entry">
+              <div class="publication-badge"><div class="publication-venue">World Wide Web</div><div class="publication-meta">2022 · <span class="publication-rank publication-rank--b">CCF-B</span></div></div>
+              <p class="publication-content">Ruosong Yang, Jiannong Cao, <b>Zhiyuan Wen</b>, Jiaxing Shen. <b>Automated post scoring: evaluating posts with topics and quoted posts in online forum</b><br>
+                  <span class="publication-details">World Wide Web, 25(3), 1197&ndash;1221, 2022.</span><br>
+                  <span class="publication-links">[<a href="https://doi.org/10.1007/s11280-022-01005-6" target="_blank" rel="noopener noreferrer">Paper</a>]</span>
+              </p>
+          </div>
+
+          <div class="publication-entry">
+              <div class="publication-badge"><div class="publication-venue">ACL-IJCNLP 2021</div><div class="publication-meta">Findings · <span class="publication-rank publication-rank--a">CCF-A</span></div></div>
               <p class="publication-content"><b>Zhiyuan Wen</b>, Jiannong Cao, Ruosong Yang, Shuaiqi Liu, Jiaxing Shen. <b>Automatically Select Emotion for Response via Personality-affected Emotion Transition</b><br>
                   <span class="publication-details">Findings of ACL-IJCNLP 2021, pp. 5010&ndash;5020.</span><br>
                   <span class="publication-links">[<a href="files/2021.findings-acl.444.pdf" target="_blank"><span class="fa fa-file-pdf"></span> PDF</a>]</span>
               </p>
           </div>
 
-          <!--<p style="margin-bottom: 25px;"> Shuaiqi Liu, Jiannong Cao, Ruosong Yang, <b>Zhiyuan Wen</b>. <b>Highlight-Transformer: Leveraging Key Phrase Aware Attention to Improve Abstractive Multi-Document Summarization</b>[C] // Findings of the Association for Computational Linguistics. <b>Findings of ACL-IJCNLP 2021 (CCF-A)</b></p>-->
+          <div class="publication-entry">
+              <div class="publication-badge"><div class="publication-venue">ACL-IJCNLP 2021</div><div class="publication-meta">Findings · <span class="publication-rank publication-rank--a">CCF-A</span></div></div>
+              <p class="publication-content">Shuaiqi Liu, Jiannong Cao, Ruosong Yang, <b>Zhiyuan Wen</b>. <b>Highlight-Transformer: Leveraging Key Phrase Aware Attention to Improve Abstractive Multi-Document Summarization</b><br>
+                  <span class="publication-details">Findings of ACL-IJCNLP 2021, pp. 5021&ndash;5027.</span><br>
+                  <span class="publication-links">[<a href="https://aclanthology.org/2021.findings-acl.445/" target="_blank" rel="noopener noreferrer">Paper</a>]</span>
+              </p>
+          </div>
+
+          <div class="publication-entry">
+              <div class="publication-badge"><div class="publication-venue">EMNLP 2020</div><div class="publication-meta">Findings · <span class="publication-rank publication-rank--b">CCF-B</span></div></div>
+              <p class="publication-content">Ruosong Yang, Jiannong Cao, <b>Zhiyuan Wen</b>, Youzheng Wu, Xiaodong He. <b>Enhancing Automated Essay Scoring Performance via Fine-tuning Pre-trained Language Models with Combination of Regression and Ranking</b><br>
+                  <span class="publication-details">Findings of the Association for Computational Linguistics: EMNLP 2020, pp. 1560&ndash;1569.</span><br>
+                  <span class="publication-links">[<a href="https://aclanthology.org/2020.findings-emnlp.141/" target="_blank" rel="noopener noreferrer">Paper</a>]</span>
+              </p>
+          </div>
 
           <div class="publication-entry">
               <div class="publication-badge"><div class="publication-venue">LREC 2020</div><div class="publication-meta">Conference</div></div>
@@ -503,8 +572,21 @@ input:checked + .slider:before {
               </p>
           </div>
 
-          <!--<p style="margin-bottom: 25px;"> Qi Xie, <b>Zhiyuan Wen</b>, Jieming Zhu, Cuiyun Gao, Zibin Zheng. <b>Detecting Duplicate Bug Reports with Convolutional Neural Network</b>[C] // 2018 Asia-Pacific Software Engineering Conference. <b>APSEC 2018 (CCF-C)</b>-->
-              <!--<a href="https://github.com/preke/apsec_2018">[Code]</a> </p>-->
+          <div class="publication-entry">
+              <div class="publication-badge"><div class="publication-venue">TNNLS</div><div class="publication-meta">2020 · <span class="publication-rank publication-rank--b">CCF-B</span></div></div>
+              <p class="publication-content">Fanghua Ye, Chuan Chen, <b>Zhiyuan Wen</b>, Zibin Zheng, Wuhui Chen, Yuren Zhou. <b>Homophily Preserving Community Detection</b><br>
+                  <span class="publication-details">IEEE Transactions on Neural Networks and Learning Systems, 31(8), 2903&ndash;2915, 2020.</span><br>
+                  <span class="publication-links">[<a href="https://doi.org/10.1109/TNNLS.2019.2933850" target="_blank" rel="noopener noreferrer">Paper</a>]</span>
+              </p>
+          </div>
+
+          <div class="publication-entry">
+              <div class="publication-badge"><div class="publication-venue">APSEC 2018</div><div class="publication-meta"><span class="publication-rank publication-rank--c">CCF-C</span></div></div>
+              <p class="publication-content">Qi Xie, <b>Zhiyuan Wen</b>, Jieming Zhu, Cuiyun Gao, Zibin Zheng. <b>Detecting Duplicate Bug Reports with Convolutional Neural Networks</b><br>
+                  <span class="publication-details">The 25th Asia-Pacific Software Engineering Conference, pp. 416&ndash;425.</span><br>
+                  <span class="publication-links">[<a href="https://doi.org/10.1109/APSEC.2018.00056" target="_blank" rel="noopener noreferrer">Paper</a>] [<a href="https://github.com/preke/apsec_2018" target="_blank" rel="noopener noreferrer">Code</a>]</span>
+              </p>
+          </div>
 
 
 
@@ -525,6 +607,16 @@ input:checked + .slider:before {
 
 
 <script>
+
+const counts = document.getElementById('publication-counts');
+for (const rank of ['a', 'b', 'c']) {
+    const badges = document.querySelectorAll('.publication-entry .publication-rank--' + rank);
+    if (badges.length) {
+        const total = document.createElement('span');
+        total.append(badges[0].cloneNode(true), ' ' + badges.length);
+        counts.append(total);
+    }
+}
 
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
