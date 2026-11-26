@@ -117,18 +117,6 @@ a:hover {
     line-height: 1.4;
 }
 
-.publication-summary {
-    margin: 0.5em 0 1.5em;
-    color: var(--timeline-muted-color);
-    font-size: 13px;
-}
-
-#publication-counts > span {
-    display: inline-block;
-    margin-right: 1em;
-    white-space: nowrap;
-}
-
 .publication-venue {
     font-size: 13px;
     font-weight: 700;
@@ -323,11 +311,7 @@ input:checked + .slider:before {
                 <div style="margin-top:5vh; text-align:justify;">
 
       <div  style="text-align:left;">
-      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><i class="section-icon fas fa-book-open" aria-hidden="true"></i><b>Selected Publications</b> <small style="font-size:x-small"><a href="https://scholar.google.com/citations?user=bLhErOwAAAAJ&amp;hl=zh-CN">(Full List on Google Scholar)</a> </small></div>
-      <div class="publication-summary">
-          <div id="publication-counts"></div>
-          Venue ranks follow the <a href="https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml">2026 CCF directory</a>. This page counts Findings papers under their parent conference.
-      </div>
+      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;"><i class="section-icon fas fa-book-open" aria-hidden="true"></i><b>Selected Publications</b> <small style="font-size:x-small"><a href="https://scholar.google.com/citations?user=bLhErOwAAAAJ&amp;hl=zh-CN">(Full List on Google Scholar)</a> </small></div><br>
 
           <div class="publication-entry" id="llm4rail">
               <div class="publication-badge">
@@ -607,16 +591,6 @@ input:checked + .slider:before {
 
 
 <script>
-
-const counts = document.getElementById('publication-counts');
-for (const rank of ['a', 'b', 'c']) {
-    const badges = document.querySelectorAll('.publication-entry .publication-rank--' + rank);
-    if (badges.length) {
-        const total = document.createElement('span');
-        total.append(badges[0].cloneNode(true), ' ' + badges.length);
-        counts.append(total);
-    }
-}
 
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
