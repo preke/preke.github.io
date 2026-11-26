@@ -111,7 +111,6 @@ a:hover {
 
 .publication-badge {
     display: grid;
-    grid-template-rows: auto minmax(1.4em, auto);
     row-gap: 2px;
     min-width: 0;
     color: var(--timeline-muted-color);
@@ -122,20 +121,17 @@ a:hover {
 }
 
 .publication-venue {
-    grid-row: 1;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.035em;
 }
 
 .publication-meta {
-    grid-row: 2;
     font-weight: 600;
     letter-spacing: 0.035em;
 }
 
 .publication-ratings {
-    grid-row: 3;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -404,17 +400,6 @@ input:checked + .slider:before {
 
           <div class="publication-entry">
               <div class="publication-badge">
-                  <div class="publication-venue">BESC 2026</div>
-                  <div class="publication-meta">Demo Track</div>
-              </div>
-              <p class="publication-content">Jianing Yin, Weng Pan Kuan, Xiaoyun Liu, <b>Zhiyuan Wen&dagger;</b>, Yuxuan Li, Milos Stojmenovic, Jiannong Cao. <b>PolyDebate: A Game-Orchestrated Multimodal System for Debate Skills Practice and Evaluation</b><br>
-                  <span class="publication-details">The 13th International Conference on Behavioural and Social Computing, Industry &amp; Demo Track.</span><br>
-                  <span class="publication-links">[<a href="https://arxiv.org/abs/2608.16276" target="_blank" rel="noopener noreferrer">Demo Paper</a>] [<a href="https://youtu.be/mHwBG1_8Ebk" target="_blank" rel="noopener noreferrer">Demo Video</a>]</span> (&dagger; Corresponding Author)
-              </p>
-          </div>
-
-          <div class="publication-entry">
-              <div class="publication-badge">
                   <div class="publication-venue">IET Software 2026</div>
                   <div class="publication-ratings">
                       <span class="publication-rank publication-rank--b">CCF-B</span>
@@ -434,28 +419,6 @@ input:checked + .slider:before {
               <p class="publication-content"><b>Zhiyuan Wen</b>, Jiannong Cao, Kelly Chan, Zijian Wang, Chen Chen, Xiaoyun Liu, Jianing Yin, Zhuo Li. <b>PolyInterview: An LLM-based Platform for Immersive Mock Interview Practice with Comprehensive Multimodal Assessment</b><br>
                   <span class="publication-details">arXiv preprint, 2026.</span><br>
                   <span class="publication-links">[<a href="https://arxiv.org/abs/2607.10310" target="_blank" rel="noopener noreferrer">Preprint</a>] [<a href="https://dannywang1922.github.io/polyinterview/" target="_blank" rel="noopener noreferrer">Project</a>]</span>
-              </p>
-          </div>
-
-          <div class="publication-entry">
-              <div class="publication-badge">
-                  <div class="publication-venue">BESC 2025</div>
-                  <div class="publication-meta">Demo Paper</div>
-              </div>
-              <p class="publication-content">Chen Chen, Jianing Yin, Jiannong Cao, <b>Zhiyuan Wen</b>, Mingjin Zhang, Weixun Gao, Xiang Wang, Haihua Shu. <b>FollowUpBot: An LLM-Based Conversational Robot for Automatic Postoperative Follow-up</b><br>
-                  <span class="publication-details">The 12th International Conference on Behavioural and Social Computing, pp. 252&ndash;260.</span><br>
-                  <span class="publication-links">[<a href="https://doi.org/10.1007/978-981-95-7144-4_23" target="_blank" rel="noopener noreferrer">Paper</a>] [<a href="https://arxiv.org/abs/2507.15502" target="_blank" rel="noopener noreferrer">Preprint</a>]</span>
-              </p>
-          </div>
-
-          <div class="publication-entry">
-              <div class="publication-badge">
-                  <div class="publication-venue">BESC 2025</div>
-                  <div class="publication-meta">Demo Paper</div>
-              </div>
-              <p class="publication-content">Jianing Zhao, Peng Gao, Jiannong Cao, <b>Zhiyuan Wen</b>, Chen Chen, Jianing Yin, Ruosong Yang, Bo Yuan. <b>CodeEdu: A Multi-Agent Collaborative Platform for Personalized Coding Education</b><br>
-                  <span class="publication-details">The 12th International Conference on Behavioural and Social Computing, pp. 261&ndash;269.</span><br>
-                  <span class="publication-links">[<a href="https://doi.org/10.1007/978-981-95-7144-4_24" target="_blank" rel="noopener noreferrer">Paper</a>] [<a href="https://arxiv.org/abs/2507.13814" target="_blank" rel="noopener noreferrer">Preprint</a>]</span>
               </p>
           </div>
 
@@ -510,7 +473,7 @@ input:checked + .slider:before {
                   <div class="publication-venue">IPM 2024</div>
                   <div class="publication-ratings">
                       <span class="publication-rank publication-rank--b">CCF-B</span>
-                      <span class="publication-zone" title="中科院一区 · Chinese Academy of Sciences, Computer Science (2025)">CAS Zone 1</span>
+                      <span class="publication-zone" lang="zh-CN" title="2025 年中科院期刊分区表 · 计算机科学大类一区">中科院一区</span>
                   </div>
               </div>
               <p class="publication-content">Shuaiqi Liu, Jiannong Cao, Yicong Li, Ruosong Yang, <b>Zhiyuan Wen*</b>. <b>Low-resource court judgment summarization for common law systems</b><br>
@@ -537,7 +500,7 @@ input:checked + .slider:before {
                   <div class="publication-venue">TKDE 2024</div>
                   <div class="publication-ratings">
                       <span class="publication-rank publication-rank--a">CCF-A</span>
-                      <span class="publication-zone" title="中科院一区 · Chinese Academy of Sciences, Computer Science (2025)">CAS Zone 1</span>
+                      <span class="publication-zone" lang="zh-CN" title="2025 年中科院期刊分区表 · 计算机科学大类一区">中科院一区</span>
                   </div>
               </div>
               <p class="publication-content">Shuaiqi Liu, Jiannong Cao, Zhongfen Deng, Wenting Zhao, Ruosong Yang, <b>Zhiyuan Wen</b>, Philip S. Yu. <b>Neural Abstractive Summarization for Long Text and Multiple Tables</b><br>
@@ -564,7 +527,7 @@ input:checked + .slider:before {
                   <div class="publication-venue">IPM 2023</div>
                   <div class="publication-ratings">
                       <span class="publication-rank publication-rank--b">CCF-B</span>
-                      <span class="publication-zone" title="中科院一区 · Chinese Academy of Sciences, Computer Science (2025)">CAS Zone 1</span>
+                      <span class="publication-zone" lang="zh-CN" title="2025 年中科院期刊分区表 · 计算机科学大类一区">中科院一区</span>
                   </div>
               </div>
               <p class="publication-content"><b>Zhiyuan Wen</b>, Jiannong Cao, Yu Yang, Haoli Wang, Ruosong Yang, Shuaiqi Liu. <b>DesPrompt: Personality-descriptive Prompt Tuning for Few-shot Personality Recognition</b><br>
@@ -592,7 +555,7 @@ input:checked + .slider:before {
                   <div class="publication-venue">TSE 2022</div>
                   <div class="publication-ratings">
                       <span class="publication-rank publication-rank--a">CCF-A</span>
-                      <span class="publication-zone" title="中科院一区 · Chinese Academy of Sciences, Computer Science (2025)">CAS Zone 1</span>
+                      <span class="publication-zone" lang="zh-CN" title="2025 年中科院期刊分区表 · 计算机科学大类一区">中科院一区</span>
                   </div>
               </div>
               <p class="publication-content">Cuiyun Gao, Jichuan Zeng, <b>Zhiyuan Wen</b>, David Lo, Xin Xia, Irwin King, Michael R. Lyu. <b>Emerging App Issue Identification via Online Joint Sentiment-Topic Tracing</b><br>
@@ -619,7 +582,7 @@ input:checked + .slider:before {
                   <div class="publication-venue">IPM 2022</div>
                   <div class="publication-ratings">
                       <span class="publication-rank publication-rank--b">CCF-B</span>
-                      <span class="publication-zone" title="中科院一区 · Chinese Academy of Sciences, Computer Science (2025)">CAS Zone 1</span>
+                      <span class="publication-zone" lang="zh-CN" title="2025 年中科院期刊分区表 · 计算机科学大类一区">中科院一区</span>
                   </div>
               </div>
               <p class="publication-content">Shuaiqi Liu, Jiannong Cao, Ruosong Yang, <b>Zhiyuan Wen</b>. <b>Key phrase aware transformer for abstractive summarization</b><br>
@@ -712,7 +675,7 @@ input:checked + .slider:before {
                   <div class="publication-venue">TNNLS 2020</div>
                   <div class="publication-ratings">
                       <span class="publication-rank publication-rank--b">CCF-B</span>
-                      <span class="publication-zone" title="中科院一区 · Chinese Academy of Sciences, Computer Science (2025)">CAS Zone 1</span>
+                      <span class="publication-zone" lang="zh-CN" title="2025 年中科院期刊分区表 · 计算机科学大类一区">中科院一区</span>
                   </div>
               </div>
               <p class="publication-content">Fanghua Ye, Chuan Chen, <b>Zhiyuan Wen</b>, Zibin Zheng, Wuhui Chen, Yuren Zhou. <b>Homophily Preserving Community Detection</b><br>
